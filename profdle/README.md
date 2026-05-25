@@ -1,16 +1,32 @@
-# React + Vite
+# HDSI Profdle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Daily Wordle-style guess for a UCSD DSC faculty profile (Vite + React).
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev      # develops; runs hire-year populate first
+npm run build    # production build
+npm run lint
+```
 
-## React Compiler
+**Canonical hire-year pipeline:** roster `yearsAtHdsi` → `years:populate` writes `hdsi-start-years.json` and syncs `hdsiStartYear` on each professor row. Details: [`scripts/README.md`](./scripts/README.md).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Course stats: **`npm run sunset:classes`**. Curated hubs/appointments: **`npm run research:patch`** (see **`scripts/patchresearchareas.mjs`**).
 
-## Expanding the ESLint configuration
+## GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. In the GitHub repo: **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.
+2. Push to **`main`** or **`master`**. The workflow **`.github/workflows/deploy-github-pages.yml`** (repo root) builds **`profdle/`** and deploys **`profdle/dist`**.
+3. Project-site URL: **`https://<user>.github.io/<repo>/`** — e.g. repo `tritondle` → `/tritondle/`.
+
+**`vite.config.js`** uses **`BASE_PATH`** for Vite **`base`**. CI sets it to the repo name; locally leave it unset (`/`).
+
+**`username.github.io` user site** (served at domain root): delete the **`BASE_PATH`** line in the workflow build step’s **`env`** so **`base`** stays **`/`**.
+
+**Preview a subpath build**
+
+```bash
+cd profdle && BASE_PATH=myrepo npm run build && npx vite preview --base /myrepo/
+```

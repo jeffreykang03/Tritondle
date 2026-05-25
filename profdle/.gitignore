@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local SunSET CSVs in scripts/ for mergesunsetclasses.
+# Remove if you intentionally commit CSV samples.
+scripts/**/*.csv

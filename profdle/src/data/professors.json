@@ -1,0 +1,1219 @@
+[
+  {
+    "id": "ilkay-altintas",
+    "name": "Ilkay Altintas",
+    "researchAreas": [
+      "data-science-for-scientific-discovery",
+      "data-infrastructure-and-systems"
+    ],
+    "yearsAtHdsi": 12,
+    "hints": [
+      "Workflows",
+      "Cyberinfrastructure"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2014
+  },
+  {
+    "id": "tiffany-amariuta",
+    "name": "Tiffany Amariuta",
+    "researchAreas": [
+      "biomedical-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Genetics",
+      "Biostatistics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "mikio-aoi",
+    "name": "Mikio Aoi",
+    "researchAreas": [
+      "biomedical-data-science",
+      "artificial-intelligence-and-machine-learning",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Neuroscience",
+      "Bayesian"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 241",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "ery-arias-castro",
+    "name": "Ery Arias-Castro",
+    "researchAreas": [
+      "statistics",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "Geometry",
+      "Statistics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2005
+  },
+  {
+    "id": "vineet-bafna",
+    "name": "Vineet Bafna",
+    "researchAreas": [
+      "biomedical-data-science"
+    ],
+    "yearsAtHdsi": 10,
+    "hints": [
+      "Genomics",
+      "Algorithms"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "associate-faculty",
+      "endowed-chairs"
+    ],
+    "hdsiStartYear": 2016
+  },
+  {
+    "id": "mikhail-belkin",
+    "name": "Mikhail Belkin",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 9,
+    "hints": [
+      "Kernels",
+      "Deep learning"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 240"
+    ],
+    "mostTaughtClass": "DSC 291",
+    "appointments": [
+      "endowed-chairs",
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2017
+  },
+  {
+    "id": "jelena-bradic",
+    "name": "Jelena Bradic",
+    "researchAreas": [
+      "statistics",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Robust stats",
+      "Causal"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2011
+  },
+  {
+    "id": "alex-cloninger",
+    "name": "Alex Cloninger",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Manifolds",
+      "Harmonics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2018
+  },
+  {
+    "id": "virginia-de-sa",
+    "name": "Virginia de Sa",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "biomedical-data-science"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "Neural nets",
+      "Brain signals"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "endowed-chairs",
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2015
+  },
+  {
+    "id": "justin-eldridge",
+    "name": "Justin Eldridge",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 7,
+    "hints": [
+      "Teaching",
+      "Theory"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 10",
+      "DSC 140A",
+      "DSC 140B",
+      "DSC 190",
+      "DSC 197",
+      "DSC 80"
+    ],
+    "mostTaughtClass": "DSC 40B",
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2019
+  },
+  {
+    "id": "shannon-ellis",
+    "name": "Shannon Ellis",
+    "researchAreas": [
+      "statistics",
+      "data-science-for-scientific-discovery",
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 7,
+    "hints": [
+      "Reproducibility",
+      "Visualization"
+    ],
+    "active": true,
+    "otherClasses": [
+      "lower",
+      "upper"
+    ],
+    "additionalCourses": [
+      "COGS 108"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2019
+  },
+  {
+    "id": "yoav-freund",
+    "name": "Yoav Freund",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 12,
+    "hints": [
+      "Boosting",
+      "Online learning"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2014
+  },
+  {
+    "id": "r-stuart-geiger",
+    "name": "R Stuart Geiger",
+    "researchAreas": [
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Open source",
+      "STS"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "rajesh-gupta",
+    "name": "Rajesh Gupta",
+    "researchAreas": [
+      "data-infrastructure-and-systems"
+    ],
+    "yearsAtHdsi": 13,
+    "hints": [
+      "Embedded",
+      "Leadership"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2013
+  },
+  {
+    "id": "julian-mcauley",
+    "name": "Julian McAuley",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 10,
+    "hints": [
+      "Recommenders",
+      "NLP"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "associate-faculty"
+    ],
+    "hdsiStartYear": 2016
+  },
+  {
+    "id": "gal-mishne",
+    "name": "Gal Mishne",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Geometry",
+      "Embeddings"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 40A",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "dimitris-politis",
+    "name": "Dimitris Politis",
+    "researchAreas": [
+      "statistics",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 12,
+    "hints": [
+      "Time series",
+      "Resampling"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "endowed-chairs",
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2014
+  },
+  {
+    "id": "babak-salimi",
+    "name": "Babak Salimi",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "data-infrastructure-and-systems",
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Causal inference",
+      "Databases"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 261"
+    ],
+    "mostTaughtClass": "DSC 100",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "jingbo-shang",
+    "name": "Jingbo Shang",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Weak supervision",
+      "NLP"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 148",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "berk-ustun",
+    "name": "Berk Ustun",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Interpretability",
+      "Decisions"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 140A",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "yusu-wang",
+    "name": "Yusu Wang",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "biomedical-data-science"
+    ],
+    "yearsAtHdsi": 9,
+    "hints": [
+      "Topology",
+      "Algorithms"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 214"
+    ],
+    "mostTaughtClass": "DSC 40B",
+    "appointments": [
+      "endowed-chairs",
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2017
+  },
+  {
+    "id": "lily-weng",
+    "name": "Lily Weng",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Adversarial",
+      "Robustness"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 291"
+    ],
+    "mostTaughtClass": "DSC 210",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "rose-yu",
+    "name": "Rose Yu",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "data-science-for-scientific-discovery"
+    ],
+    "yearsAtHdsi": 7,
+    "hints": [
+      "Spatiotemporal",
+      "Physics ML"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "associate-faculty",
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2019
+  },
+  {
+    "id": "arun-kumar",
+    "name": "Arun Kumar",
+    "researchAreas": [
+      "data-infrastructure-and-systems",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 7,
+    "hints": [
+      "Databases",
+      "ML systems"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2019
+  },
+  {
+    "id": "barna-saha",
+    "name": "Barna Saha",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Streaming",
+      "Graphs"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2018
+  },
+  {
+    "id": "bradley-voytek",
+    "name": "Bradley Voytek",
+    "researchAreas": [
+      "biomedical-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "Oscillations",
+      "Neuroscience"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "additionalCourses": [
+      "COGS 9"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2015
+  },
+  {
+    "id": "sam-lau",
+    "name": "Sam Lau",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "HCI",
+      "Pedagogy"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 209R"
+    ],
+    "mostTaughtClass": "DSC 106",
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "marina-langlois",
+    "name": "Marina Langlois",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Discrete math",
+      "Undergrad"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 30",
+      "DSC 95"
+    ],
+    "mostTaughtClass": "DSC 20",
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2018
+  },
+  {
+    "id": "terry-sejnowski",
+    "name": "Terry Sejnowski",
+    "researchAreas": [
+      "biomedical-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 14,
+    "hints": [
+      "Neuroscience",
+      "Salk"
+    ],
+    "active": true,
+    "otherClasses": [
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "associate-faculty"
+    ],
+    "hdsiStartYear": 2012
+  },
+  {
+    "id": "young-han-kim",
+    "name": "Young-Han Kim",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 12,
+    "hints": [
+      "Information theory",
+      "Limits"
+    ],
+    "active": true,
+    "otherClasses": [
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "associate-faculty"
+    ],
+    "hdsiStartYear": 2014
+  },
+  {
+    "id": "hao-zhang",
+    "name": "Hao Zhang",
+    "researchAreas": [
+      "data-infrastructure-and-systems",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 4,
+    "hints": [
+      "Distributed",
+      "Training"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 204A",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2022
+  },
+  {
+    "id": "alex-warstadt",
+    "name": "Alex Warstadt",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 4,
+    "hints": [
+      "Syntax",
+      "Linguistics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2022
+  },
+  {
+    "id": "zhiting-hu",
+    "name": "Zhiting Hu",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Probabilistic",
+      "Generation"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 250"
+    ],
+    "mostTaughtClass": "DSC 140B",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "yian-ma",
+    "name": "Yian Ma",
+    "researchAreas": [
+      "statistics",
+      "artificial-intelligence-and-machine-learning",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Uncertainty",
+      "Asymptotics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 291"
+    ],
+    "mostTaughtClass": "DSC 40A",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "arya-mazumdar",
+    "name": "Arya Mazumdar",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 9,
+    "hints": [
+      "Coding theory",
+      "TILOS"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 212"
+    ],
+    "mostTaughtClass": "DSC 206",
+    "appointments": [
+      "endowed-chairs",
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2017
+  },
+  {
+    "id": "rayan-saab",
+    "name": "Rayan Saab",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Compressed sensing",
+      "Quantization"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2018
+  },
+  {
+    "id": "frank-wuerthwein",
+    "name": "Frank Wuerthwein",
+    "researchAreas": [
+      "data-infrastructure-and-systems",
+      "data-science-for-scientific-discovery"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "SDSC",
+      "Distributed"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2015
+  },
+  {
+    "id": "rob-knight",
+    "name": "Rob Knight",
+    "researchAreas": [
+      "biomedical-data-science"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Microbiome",
+      "Multiomics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2018
+  },
+  {
+    "id": "haojian-jin",
+    "name": "Haojian Jin",
+    "researchAreas": [
+      "data-infrastructure-and-systems",
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 4,
+    "hints": [
+      "Security",
+      "Privacy"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 102",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2022
+  },
+  {
+    "id": "ronghui-lily-xu",
+    "name": "Ronghui (Lily) Xu",
+    "researchAreas": [
+      "biomedical-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 10,
+    "hints": [
+      "Biostatistics",
+      "Trials"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2016
+  },
+  {
+    "id": "george-sugihara",
+    "name": "George Sugihara",
+    "researchAreas": [
+      "data-science-for-scientific-discovery",
+      "statistics"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "Dynamics",
+      "Ecology"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2015
+  },
+  {
+    "id": "michael-holst",
+    "name": "Michael Holst",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "data-science-for-scientific-discovery"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "PDEs",
+      "Numerics"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2015
+  },
+  {
+    "id": "biwei-huang",
+    "name": "Biwei Huang",
+    "researchAreas": [
+      "artificial-intelligence-and-machine-learning",
+      "theoretical-foundations-of-data-science"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Causal discovery",
+      "Representations"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 210",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "duncan-watson-parris",
+    "name": "Duncan Watson-Parris",
+    "researchAreas": [
+      "data-science-for-scientific-discovery",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Climate",
+      "Earth ML"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 200"
+    ],
+    "mostTaughtClass": "DSC 80",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "tauhidur-rahman",
+    "name": "Tauhidur Rahman",
+    "researchAreas": [
+      "data-and-society",
+      "data-science-for-scientific-discovery"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Mobile sensing",
+      "Development"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 80",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "benjamin-smarr",
+    "name": "Benjamin Smarr",
+    "researchAreas": [
+      "biomedical-data-science",
+      "data-science-for-scientific-discovery"
+    ],
+    "yearsAtHdsi": 6,
+    "hints": [
+      "Wearables",
+      "Rhythms"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2020
+  },
+  {
+    "id": "albert-hsiao",
+    "name": "Albert Hsiao",
+    "researchAreas": [
+      "biomedical-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 8,
+    "hints": [
+      "Radiology",
+      "Imaging"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2018
+  },
+  {
+    "id": "tara-javidi",
+    "name": "Tara Javidi",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "artificial-intelligence-and-machine-learning"
+    ],
+    "yearsAtHdsi": 11,
+    "hints": [
+      "Sequential",
+      "Networks"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2015
+  },
+  {
+    "id": "armin-schwartzman",
+    "name": "Armin Schwartzman",
+    "researchAreas": [
+      "statistics",
+      "biomedical-data-science"
+    ],
+    "yearsAtHdsi": 10,
+    "hints": [
+      "Spatial stats",
+      "Imaging"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 241"
+    ],
+    "mostTaughtClass": "DSC 190",
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2016
+  },
+  {
+    "id": "shankar-subramaniam",
+    "name": "Shankar Subramaniam",
+    "researchAreas": [
+      "biomedical-data-science"
+    ],
+    "yearsAtHdsi": 12,
+    "hints": [
+      "Systems biology",
+      "Networks"
+    ],
+    "active": true,
+    "otherClasses": [
+      "upper",
+      "grad"
+    ],
+    "mostTaughtClass": null,
+    "appointments": [
+      "tenure-track"
+    ],
+    "hdsiStartYear": 2014
+  },
+  {
+    "id": "peter-chi",
+    "name": "Peter Chi",
+    "researchAreas": [
+      "biomedical-data-science",
+      "statistics"
+    ],
+    "yearsAtHdsi": 2,
+    "hints": [
+      "Intro DSC",
+      "Phylogenetics"
+    ],
+    "active": true,
+    "otherClasses": [],
+    "mostTaughtClass": "DSC 10",
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2024
+  },
+  {
+    "id": "janine-tiefenbruck",
+    "name": "Janine Tiefenbruck",
+    "researchAreas": [
+      "data-and-society",
+      "statistics"
+    ],
+    "yearsAtHdsi": 5,
+    "hints": [
+      "Practice DSC",
+      "Pedagogy"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 40A",
+      "DSC 80",
+      "DSC 95"
+    ],
+    "mostTaughtClass": "DSC 10",
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "kyle-shannon",
+    "name": "Kyle Shannon",
+    "researchAreas": [
+      "theoretical-foundations-of-data-science",
+      "data-infrastructure-and-systems"
+    ],
+    "yearsAtHdsi": 4,
+    "hints": [
+      "Foundations",
+      "Core DSC"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 100"
+    ],
+    "mostTaughtClass": "DSC 40A",
+    "additionalCourses": [
+      "COGS 8",
+      "COGS 9"
+    ],
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2021
+  },
+  {
+    "id": "soohyun-nam-liao",
+    "name": "Soohyun Nam Liao",
+    "researchAreas": [
+      "data-and-society"
+    ],
+    "yearsAtHdsi": 3,
+    "hints": [
+      "CS education",
+      "Equity"
+    ],
+    "active": true,
+    "otherClasses": [
+      "DSC 106",
+      "DSC 90"
+    ],
+    "mostTaughtClass": "DSC 30",
+    "appointments": [
+      "teaching-faculty"
+    ],
+    "hdsiStartYear": 2023
+  }
+]

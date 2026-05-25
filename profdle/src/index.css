@@ -55,8 +55,8 @@ body {
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
@@ -108,4 +108,611 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* --- HDSI Profdle --- */
+.profdle {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px clamp(16px, 4vw, 40px) 48px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.profdle-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.profdle-header-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.header-help-btns {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.info-icon-btn {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.info-icon-btn:hover {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.info-icon-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.info-icon-char {
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', serif;
+  margin-top: 1px;
+}
+
+.profdle-header h1 {
+  font-size: clamp(1.65rem, 3.5vw, 2.1rem);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text);
+  opacity: 0.9;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.guess-input {
+  margin-bottom: 24px;
+}
+
+.guess-input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-h);
+}
+
+.guess-input-combo {
+  position: relative;
+  width: 100%;
+}
+
+.guess-input-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.guess-input-row input {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.guess-input-row button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+.guess-input-row button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.guess-input-hint {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 40;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-height: min(50vh, 380px);
+  overflow-y: auto;
+}
+
+.suggestion-btn {
+  display: block;
+  box-sizing: border-box;
+  width: calc(100% - 8px);
+  margin: 0 4px;
+  text-align: left;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-h);
+  font: inherit;
+  cursor: pointer;
+}
+
+li + li .suggestion-btn {
+  margin-top: 2px;
+}
+
+.suggestion-btn:hover:not(:disabled) {
+  background: var(--code-bg);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.guess-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.guess-table th,
+.guess-table td {
+  border: 1px solid var(--border);
+  padding: 12px 12px;
+  vertical-align: middle;
+}
+
+.guess-table thead th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  padding: 6px 9px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.guess-table .name-cell {
+  min-width: 10rem;
+  white-space: nowrap;
+}
+
+.guess-table th:nth-child(2),
+.guess-table td:nth-child(2) {
+  min-width: 9rem;
+  max-width: 11rem;
+  white-space: normal;
+}
+
+.guess-table th:nth-child(3),
+.guess-table td:nth-child(3) {
+  min-width: 11rem;
+  max-width: 18rem;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.guess-table th:nth-child(6),
+.guess-table td:nth-child(6) {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.guess-table .hint-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28em;
+}
+
+.guess-table .hint-cell-value {
+  min-width: 1ch;
+}
+
+.guess-table .hint-chevron {
+  flex-shrink: 0;
+  opacity: 0.7;
+  color: var(--text-h);
+}
+
+.guess-table th {
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.cell.match {
+  background: rgba(34, 197, 94, 0.28);
+}
+
+.guess-table tbody td.cell.match {
+  background: rgba(34, 197, 94, 0.34);
+}
+
+.guess-table tbody td.cell.match.name-cell {
+  font-weight: 600;
+}
+
+.cell.partial {
+  background: rgba(234, 179, 8, 0.35);
+}
+
+.cell.partial-weak {
+  background: rgba(249, 115, 22, 0.3);
+}
+
+.cell.none {
+  background: rgba(239, 68, 68, 0.24);
+}
+
+.hint-box {
+  margin-bottom: 24px;
+}
+
+.hint-box-inner {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+}
+
+.hint-box-heading {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+}
+
+.hint-box-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hint-box-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.hint-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hint-btn:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.hint-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hint-box-meta {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.hint-revealed {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  text-align: left;
+}
+
+.hint-revealed p {
+  margin: 6px 0 0;
+  color: var(--text-h);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.hint-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hint-lines {
+  margin: 0;
+}
+
+.hint-lines .hint {
+  margin: 0 0 8px;
+}
+
+.hint-lines .hint:last-child {
+  margin-bottom: 0;
+}
+
+.hint.locked {
+  opacity: 0.65;
+  font-style: italic;
+}
+
+.info-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 10000;
+  overflow-y: auto;
+}
+
+.info-card {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 24px 24px;
+  max-width: min(40rem, 100%);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.info-popup {
+  animation: info-popup-in 0.18s ease-out;
+}
+
+@keyframes info-popup-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info-popup {
+    animation: none;
+  }
+}
+
+.info-dialog-title {
+  margin: 0 40px 14px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+}
+
+.info-dialog-body {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.info-dialog-body p {
+  margin: 0 0 12px;
+}
+
+.info-dialog-body p:last-child {
+  margin-bottom: 0;
+}
+
+.howto-dialog {
+  max-width: min(44rem, 100%);
+}
+
+.howto-dialog-body {
+  max-height: min(70vh, 36rem);
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-right: -4px;
+}
+
+.howto-heading {
+  margin: 18px 0 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.howto-heading:first-of-type {
+  margin-top: 14px;
+}
+
+.howto-subheading {
+  margin: 14px 0 6px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.howto-muted {
+  font-size: 0.82rem;
+  opacity: 0.9;
+  margin-bottom: 0 !important;
+}
+
+.howto-footer {
+  margin-top: 18px !important;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem !important;
+  opacity: 0.92;
+}
+
+.howto-btn .info-icon-char {
+  font-style: normal;
+}
+
+.info-dialog-body a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.info-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-close:hover {
+  background: var(--code-bg);
+  color: var(--text-h);
+}
+
+.info-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.end-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 10001;
+}
+
+.end-card {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 360px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.end-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.end-close:hover {
+  background: var(--code-bg);
+  color: var(--text-h);
+}
+
+.end-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.end-title {
+  margin: 0 0 16px;
+  padding: 0 32px;
+  color: var(--text-h);
+}
+
+.end-card-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+.end-card-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.end-card-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }

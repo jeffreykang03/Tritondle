@@ -5,9 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev": "npm run years:populate",
+    "prebuild": "npm run verify:data && npm run years:populate",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint . && npm run verify:data",
+    "preview": "vite preview",
+    "verify:data": "node scripts/verifyprofessors.mjs",
+    "sunset:classes": "node scripts/mergesunsetclasses.mjs",
+    "sunset:classes:dry": "node scripts/mergesunsetclasses.mjs --dry-run",
+    "research:patch": "node scripts/patchresearchareas.mjs",
+    "years:wipe": "node scripts/years.mjs wipe",
+    "years:sync": "node scripts/years.mjs sync",
+    "years:from-roster": "node scripts/years.mjs populate",
+    "years:populate": "node scripts/years.mjs populate"
   },
   "dependencies": {
     "react": "^19.2.5",

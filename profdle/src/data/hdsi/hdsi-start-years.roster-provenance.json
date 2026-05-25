@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-05-25T07:59:27.577Z",
+  "mechanism": "roster_yearsAtHdsi_minus_reference_year",
+  "referencePacificDateKeyDefault": "2026-05-25",
+  "referenceYearUsed": 2026,
+  "formula": "hdsiStartYear = clamp(referenceYear - yearsAtHdsi, ...) then manual overrides",
+  "manualOverridesPath": "src/data/hdsi/hdsi-start-years.manual.json",
+  "derivedCount": 54,
+  "manualOverrideIds": [
+    "ery-arias-castro",
+    "jelena-bradic",
+    "kyle-shannon"
+  ]
+}

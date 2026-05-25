@@ -1,122 +1,183 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useEffect, useMemo, useState } from 'react'
+import professors from './data/professors.json'
+import { GuessInput } from './components/GuessInput.jsx'
+import { GuessTable } from './components/GuessTable.jsx'
+import { HintBox } from './components/HintBox.jsx'
+import { EndModal } from './components/EndModal.jsx'
+import { FootnoteDialog } from './components/FootnoteDialog.jsx'
+import { HowToPlayDialog } from './components/HowToPlayDialog.jsx'
+import { buildShareText } from './utils/gameShare.js'
+import {
+  clearPersistedGame,
+  loadPersistedGame,
+  savePersistedGame,
+} from './utils/gameStorage.js'
+import { getDailyProfessor } from './utils/getDailyProfessor.js'
+import { getPacificDateKey } from './utils/pacificDate.js'
 
-function App() {
-  const [count, setCount] = useState(0)
+/** TEMPORARY (testing): dev-only — delete `DEV_FIXED_TARGET_ID` block to restore daily rotation */
+const DEV_FIXED_TARGET_ID = import.meta.env.DEV ? 'yusu-wang' : null
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+function initGame() {
+  const puzzleDayKey = getPacificDateKey(new Date())
+  const picked = getDailyProfessor(professors, puzzleDayKey)
+  const fixed =
+    DEV_FIXED_TARGET_ID != null &&
+    professors.find((p) => p.id === DEV_FIXED_TARGET_ID)
+  const target = fixed ?? picked
+  const defaults = {
+    guesses: [],
+    status: 'playing',
+    winModalDismissed: false,
+  }
+  const saved = loadPersistedGame({ puzzleDayKey, targetId: target.id })
+  if (!saved) {
+    return { puzzleDayKey, target, ...defaults }
+  }
+  const guesses = saved.guessIds
+    .map((id) => professors.find((p) => p.id === id))
+    .filter(Boolean)
+  return {
+    puzzleDayKey,
+    target,
+    guesses,
+    status: saved.status === 'won' ? 'won' : 'playing',
+    winModalDismissed: saved.winModalDismissed === true,
+  }
 }
 
-export default App
+export default function App() {
+  const [init] = useState(initGame)
+
+  const [guesses, setGuesses] = useState(init.guesses)
+  const [status, setStatus] = useState(init.status)
+  const [winModalDismissed, setWinModalDismissed] = useState(init.winModalDismissed ?? false)
+  const [footnoteOpen, setFootnoteOpen] = useState(false)
+  const [howToPlayOpen, setHowToPlayOpen] = useState(false)
+
+  const activeProfessors = useMemo(() => professors.filter((p) => p.active !== false), [])
+
+  const shareText = useMemo(
+    () =>
+      buildShareText({
+        guesses,
+        target: init.target,
+        puzzleDayKey: init.puzzleDayKey,
+        gameUrl: typeof window !== 'undefined' ? window.location.href : '',
+      }),
+    [guesses, init.target, init.puzzleDayKey],
+  )
+
+  useEffect(() => {
+    savePersistedGame({
+      puzzleDayKey: init.puzzleDayKey,
+      targetId: init.target.id,
+      guessIds: guesses.map((g) => g.id),
+      status,
+      winModalDismissed,
+    })
+  }, [init.puzzleDayKey, init.target.id, guesses, status, winModalDismissed])
+
+  useEffect(() => {
+    const key = init.puzzleDayKey
+    const id = window.setInterval(() => {
+      if (getPacificDateKey(new Date()) !== key) {
+        window.location.reload()
+      }
+    }, 45_000)
+    return () => window.clearInterval(id)
+  }, [init.puzzleDayKey])
+
+  useEffect(() => {
+    if (!import.meta.env.DEV) return undefined
+
+    window.__profdleReset = () => {
+      clearPersistedGame()
+      window.location.reload()
+    }
+    return () => {
+      delete window.__profdleReset
+    }
+  }, [])
+
+  function handleGuess(professor) {
+    if (status !== 'playing') return
+    if (guesses.some((g) => g.id === professor.id)) return
+
+    const next = [...guesses, professor]
+    setGuesses(next)
+
+    if (professor.id === init.target.id) {
+      setWinModalDismissed(false)
+      setStatus('won')
+    }
+  }
+
+  const playing = status === 'playing'
+
+  return (
+    <main className="profdle">
+      <header className="profdle-header">
+        <div className="profdle-header-top">
+          <h1>HDSI Profdle</h1>
+          <div className="header-help-btns" role="group" aria-label="Help">
+            <button
+              type="button"
+              className="info-icon-btn howto-btn"
+              aria-label="How to play"
+              aria-expanded={howToPlayOpen}
+              aria-haspopup="dialog"
+              aria-controls="howto-dialog"
+              onClick={() => {
+                setHowToPlayOpen((open) => !open)
+                setFootnoteOpen(false)
+              }}
+            >
+              <span className="info-icon-char" aria-hidden="true">
+                ?
+              </span>
+            </button>
+            <button
+              type="button"
+              className="info-icon-btn"
+              aria-label="About data and scoring"
+              aria-expanded={footnoteOpen}
+              aria-haspopup="dialog"
+              aria-controls="footnote-dialog"
+              onClick={() => {
+                setFootnoteOpen((open) => !open)
+                setHowToPlayOpen(false)
+              }}
+            >
+              <span className="info-icon-char" aria-hidden="true">
+                i
+              </span>
+            </button>
+          </div>
+        </div>
+        <p className="subtitle">Guess the HDSI professor!</p>
+      </header>
+
+      <GuessInput
+        professors={activeProfessors}
+        guesses={guesses}
+        disabled={!playing}
+        onGuess={handleGuess}
+      />
+
+      <GuessTable guesses={guesses} target={init.target} puzzleDayKey={init.puzzleDayKey} />
+
+      <HintBox target={init.target} guessCount={guesses.length} />
+
+      <HowToPlayDialog open={howToPlayOpen} onDismiss={() => setHowToPlayOpen(false)} />
+      <FootnoteDialog open={footnoteOpen} onDismiss={() => setFootnoteOpen(false)} />
+
+      <EndModal
+        open={status === 'won' && !winModalDismissed}
+        guessCount={guesses.length}
+        shareText={shareText}
+        onDismiss={() => setWinModalDismissed(true)}
+      />
+    </main>
+  )
+}
