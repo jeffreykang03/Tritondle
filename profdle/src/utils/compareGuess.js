@@ -36,27 +36,21 @@ function compareTagSets(gs, ts) {
 }
 
 /**
- * Other courses column: SunSET DSC / additionalCourses drive yellow/orange when present.
- * Placeholder bands only matter when neither side lists real courses — then green iff band sets match exactly.
+ * Other courses: overlap on real DSC / extra codes (not level bands).
+ * When neither side lists any real code, treat as green — bands are placeholders and are hidden in the UI ("—"),
+ * so comparing band sets vs empty produced inconsistent reds for identical-looking cells.
  */
 function compareOtherCourseTags(guessList, targetList) {
-  const { reals: gr, bands: gbRaw } = splitRealVsBandTags(guessList)
-  const { reals: tr, bands: tbRaw } = splitRealVsBandTags(targetList)
+  const { reals: gr } = splitRealVsBandTags(guessList)
+  const { reals: tr } = splitRealVsBandTags(targetList)
   const gs = new Set(gr)
   const ts = new Set(tr)
 
-  if (gs.size > 0 || ts.size > 0) {
-    return compareTagSets(gs, ts)
+  if (gs.size === 0 && ts.size === 0) {
+    return 'match'
   }
 
-  const gb = new Set(gbRaw.map(String))
-  const tb = new Set(tbRaw.map(String))
-  if (gb.size === 0 && tb.size === 0) return 'match'
-  if (gb.size !== tb.size) return 'none'
-  for (const x of gb) {
-    if (!tb.has(x)) return 'none'
-  }
-  return 'match'
+  return compareTagSets(gs, ts)
 }
 
 /** Tag overlap for hubs/directory labels; both empty → match (same “no tags”). */
@@ -136,6 +130,11 @@ const MOST_TAUGHT_CLOSE_NUMBER_GAP = 20
 function compareMostTaughtClass(guessMt, targetMt, targetOtherTags) {
   const ge = guessMt == null || String(guessMt).trim() === ''
   const te = targetMt == null || String(targetMt).trim() === ''
+
+  /** Neither row lists a primary — same empty UI ("—"); treat as match (like Other courses with no real codes). */
+  if (ge && te) {
+    return 'match'
+  }
 
   if (!ge && !te && normToken(guessMt) === normToken(targetMt)) return 'match'
 

@@ -15,6 +15,8 @@ npm run lint
 
 Course stats: **`npm run sunset:classes`**. Curated hubs/appointments: **`npm run research:patch`** (see **`scripts/patchresearchareas.mjs`**).
 
+**In-house roster CSV** (review / planning): **`npm run roster:spreadsheet`** → [`roster/professors-roster.csv`](./roster/professors-roster.csv) (regenerate after editing `professors.json`).
+
 ## GitHub Pages
 
 1. In the GitHub repo: **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.

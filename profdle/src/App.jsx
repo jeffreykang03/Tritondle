@@ -12,19 +12,12 @@ import {
   loadPersistedGame,
   savePersistedGame,
 } from './utils/gameStorage.js'
-import { getDailyProfessor } from './utils/getDailyProfessor.js'
+import { getDailyProfessor, getActiveProfessors } from './utils/getDailyProfessor.js'
 import { getPacificDateKey } from './utils/pacificDate.js'
-
-/** TEMPORARY (testing): dev-only — delete `DEV_FIXED_TARGET_ID` block to restore daily rotation */
-const DEV_FIXED_TARGET_ID = import.meta.env.DEV ? 'yusu-wang' : null
 
 function initGame() {
   const puzzleDayKey = getPacificDateKey(new Date())
-  const picked = getDailyProfessor(professors, puzzleDayKey)
-  const fixed =
-    DEV_FIXED_TARGET_ID != null &&
-    professors.find((p) => p.id === DEV_FIXED_TARGET_ID)
-  const target = fixed ?? picked
+  const target = getDailyProfessor(professors, puzzleDayKey)
   const defaults = {
     guesses: [],
     status: 'playing',
@@ -47,7 +40,7 @@ function initGame() {
 }
 
 export default function App() {
-  const [init] = useState(initGame)
+  const [init] = useState(() => initGame())
 
   const [guesses, setGuesses] = useState(init.guesses)
   const [status, setStatus] = useState(init.status)
@@ -55,7 +48,7 @@ export default function App() {
   const [footnoteOpen, setFootnoteOpen] = useState(false)
   const [howToPlayOpen, setHowToPlayOpen] = useState(false)
 
-  const activeProfessors = useMemo(() => professors.filter((p) => p.active !== false), [])
+  const activeProfessors = useMemo(() => getActiveProfessors(professors), [])
 
   const shareText = useMemo(
     () =>

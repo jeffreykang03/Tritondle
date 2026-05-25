@@ -17,7 +17,8 @@
     "years:wipe": "node scripts/years.mjs wipe",
     "years:sync": "node scripts/years.mjs sync",
     "years:from-roster": "node scripts/years.mjs populate",
-    "years:populate": "node scripts/years.mjs populate"
+    "years:populate": "node scripts/years.mjs populate",
+    "roster:spreadsheet": "node scripts/export-professors-spreadsheet.mjs"
   },
   "dependencies": {
     "react": "^19.2.5",
