@@ -47,12 +47,7 @@ export function FootnoteDialog({ open, onDismiss }) {
             “lower” don&apos;t count). If there are no course tags at all, the hint says so.
           </p>
           <p>
-            <strong>DSC tenure</strong> is whole calendar years from each professor&apos;s roster affiliation{' '}
-            <strong>start year</strong> through this puzzle&apos;s calendar year—the same progression as UCSD DSC
-            faculty listings, not strictly “years since the Halicioğlu-era institute existed.” Start years come from{' '}
-            <strong>yearsAtHdsi</strong> on each row plus <strong>manual</strong> exceptions;{' '}
-            <code>years:populate</code> derives <strong>start years</strong> from the roster using the Pacific
-            calendar&apos;s puzzle year minus that count so displayed tenure advances year over year—not HR-official data. Green / yellow / arrows work like other numeric columns.
+            <strong>DSC tenure</strong> is WIP.
           </p>
         </div>
       </div>
