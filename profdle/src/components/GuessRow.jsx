@@ -50,7 +50,7 @@ function joinParts(parts) {
   return parts.join(', ')
 }
 
-/** Small triangle toward the answer (years: higher UCSD years when ↑; catalog course: later course when ↑). */
+/** Small triangle toward the answer (years: higher HDSI tenure when ↑; catalog course: later course when ↑). */
 function HintChevron({ direction }) {
   if (direction !== 'up' && direction !== 'down') return null
   const up = direction === 'up'
@@ -99,9 +99,9 @@ export function GuessRow({ guess, target, puzzleDayKey }) {
 
   const yearsCellTitle =
     r.yearsArrow === 'up'
-      ? 'Answer has more DSC tenure (from this roster start year) than this professor'
+      ? 'Answer has more HDSI tenure (from this roster start year) than this professor'
       : r.yearsArrow === 'down'
-        ? 'Answer has fewer DSC tenure (from this roster start year) than this professor'
+        ? 'Answer has fewer HDSI tenure (from this roster start year) than this professor'
         : undefined
 
   const mostTaughtCellTitle =

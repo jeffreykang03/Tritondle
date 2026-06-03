@@ -8,7 +8,7 @@ export function puzzleCalendarYear(puzzleDayKey) {
 }
 
 /**
- * Whole calendar years **at UCSD** for the puzzle column (displayed “UCSD years”):
+ * Whole calendar years **at UCSD** for the puzzle column (displayed “HDSI tenure”):
  * `puzzle calendar year − ucsdStartYear` (floored at 0).
  *
  * **`ucsdStartYear`** must be maintained on each `professors.json` row (calendar year first roster-listed/joined; see docs).

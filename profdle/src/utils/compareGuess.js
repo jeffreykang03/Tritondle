@@ -160,7 +160,7 @@ function compareMostTaughtClass(guessMt, targetMt, targetOtherTags) {
 /**
  * Compare a guessed professor to the daily target.
  * Expects: appointments (faculty directory tags), mostTaughtClass (optional),
- * otherClasses, optional additionalCourses, researchAreas; UCSD years via {@link prof.ucsdStartYear} — see docs/ucsd-years-data.md.
+ * otherClasses, optional additionalCourses, researchAreas; HDSI tenure via {@link prof.ucsdStartYear} — see docs/ucsd-years-data.md.
  */
 export function compareGuess(guess, target, puzzleDayKey) {
   const isCorrect = guess.id === target.id

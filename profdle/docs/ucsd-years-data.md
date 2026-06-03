@@ -1,8 +1,8 @@
-# UCSD years column (data & how we maintain it)
+# HDSI tenure column (data & how we maintain it)
 
-This document is the **source of truth for humans** on how the game’s **UCSD years** number is produced. Code paths: `src/utils/ucsdYears.js` and `scripts/years.mjs`.
+This document is the **source of truth for humans** on how the game’s **HDSI tenure** column is produced (internal field **`ucsdStartYear`**). Code paths: `src/utils/ucsdYears.js` and `scripts/years.mjs`.
 
-**Current state:** if automated scraping misses someone, **`ucsdStartYear`** may be absent; those rows show **—** for UCSD years until filled. Run **`npm run years:populate`** after changing years.
+**Current state:** if automated scraping misses someone, **`ucsdStartYear`** may be absent; those rows show **—** for HDSI tenure until filled. Run **`npm run years:populate`** after changing years.
 
 _(Older link: **`dsc-tenure-data.md`** redirects here.)_
 
@@ -10,7 +10,7 @@ _(Older link: **`dsc-tenure-data.md`** redirects here.)_
 
 The puzzle column counts **whole calendar years at UC San Diego** derived from **`ucsdStartYear`** (formerly `hdsiStartYear`), **not** a separate “DSC-only” tenure product:
 
-- **UCSD years** = **`puzzle calendar year − ucsdStartYear`**, floored at 0. **`ucsdStartYear`** is the **earliest calendar year we store** where the person is on **UC San Diego** in an academic/faculty-relevant capacity we could extract, using automated passes over:
+- **HDSI tenure** (display) = **`puzzle calendar year − ucsdStartYear`**, floored at 0. **`ucsdStartYear`** is the **earliest calendar year we store** where the person is on **UC San Diego** in an academic/faculty-relevant capacity we could extract, using automated passes over:
   - **HDSI** **`/people/`** bios on `datascience.ucsd.edu` (e.g. joined UCSD, rank + year, sometimes SDSC when that’s what the bio gives);
   - **`profiles.ucsd.edu`** rows pairing **UC San Diego** with **Halıcıoğlu Data Science Institute / HDSI** when we need another source.
 - It is **not** HR tenure, payroll, promotion year, or a guarantee about any single official job title — just “years since **our** scraped/list **start year** at UCSD.” Tight interpretations need **`ucsd-start-years.manual.json`** or edits to **`professors.json`**.
@@ -74,4 +74,4 @@ The crawler prefers explicit hire phrases on HDSI bios (“joined UC San Diego i
 
 ## Historical note
 
-Earlier versions stored a derived **`yearsAtHdsi`** counter; later we standardized on **calendar start year**. The JSON field **`hdsiStartYear`** was renamed **`ucsdStartYear`** while column presentation stays **UCSD years** for clarity vs “DSC tenure.”
+Earlier versions stored a derived **`yearsAtHdsi`** counter; later we standardized on **calendar start year**. The JSON field **`hdsiStartYear`** was renamed **`ucsdStartYear`** while the UI column label is **HDSI tenure**.

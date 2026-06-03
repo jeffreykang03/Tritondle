@@ -16,7 +16,7 @@ npm run lint
 
 Local builds always use site root `/`. GitHub Pages uses `npm run build:pages` in CI (`/tritondle/` when the repo is named `tritondle`).
 
-**UCSD years (`ucsdStartYear`):** Each professor row stores a roster-listed **start calendar year**. **`npm run years:populate`** merges `professors.json` + **`src/data/hdsi/ucsd-start-years.manual.json`**, refreshes **`ucsd-start-years.json`**, and syncs rows. Full process: **[`docs/ucsd-years-data.md`](./docs/ucsd-years-data.md)** (older **`docs/dsc-tenure-data.md`** redirects).
+**HDSI tenure (`ucsdStartYear`):** Each professor row stores a roster-listed **start calendar year** (shown as years at UCSD in-game). **`npm run years:populate`** merges `professors.json` + **`src/data/hdsi/ucsd-start-years.manual.json`**, refreshes **`ucsd-start-years.json`**, and syncs rows. Full process: **[`docs/ucsd-years-data.md`](./docs/ucsd-years-data.md)** (older **`docs/dsc-tenure-data.md`** redirects).
 
 ```bash
 npm run years:populate   # run alone or via prebuild / predev

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * UCSD years: canonical field is **ucsdStartYear** (roster-listed start calendar year) on each professor row.
+ * HDSI tenure column: canonical field is **ucsdStartYear** (roster-listed start calendar year) on each professor row.
  * Optional overrides: src/data/hdsi/ucsd-start-years.manual.json
  *
  *   node scripts/years.mjs              → populate (default)

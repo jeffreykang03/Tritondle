@@ -45,7 +45,7 @@ export function FootnoteDialog({ open, onDismiss }) {
             <strong>most-taught course</strong> is shown if available. Otherwise, other courses professor has taught are shown.
           </p>
           <p>
-            DSC tenure is WIP, only partial data.
+            HDSI tenure is WIP, only partial data.
           </p>
         </div>
       </div>
