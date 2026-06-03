@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 /**
- * DSC tenure / roster start years — one entrypoint:
+ * UCSD years: canonical field is **ucsdStartYear** (roster-listed start calendar year) on each professor row.
+ * Optional overrides: src/data/hdsi/ucsd-start-years.manual.json
  *
  *   node scripts/years.mjs              → populate (default)
- *   node scripts/years.mjs populate [--reference-year=YYYY]
- *   node scripts/years.mjs sync        → apply existing hdsi-start-years.json only
- *   node scripts/years.mjs wipe        → strip hdsiStartYear from every professor row
+ *   node scripts/years.mjs populate
+ *   node scripts/years.mjs sync        → apply existing ucsd-start-years.json only
+ *   node scripts/years.mjs wipe        → strip start-year field from every professor row
+ *
+ * Documentation: docs/ucsd-years-data.md
  */
 import fs from 'node:fs'
-import path from 'node:path'
+import path from 'path'
 import { fileURLToPath } from 'node:url'
 
 import { getPacificDateKey } from '../src/utils/pacificDate.js'
@@ -18,19 +21,11 @@ const PKG_ROOT = path.join(__dirname, '..')
 const DATA_DIR = path.join(PKG_ROOT, 'src', 'data')
 const HDSI_DIR = path.join(DATA_DIR, 'hdsi')
 const PROF_PATH = path.join(DATA_DIR, 'professors.json')
-const MANUAL_PATH = path.join(HDSI_DIR, 'hdsi-start-years.manual.json')
-const OUT_MAP = path.join(HDSI_DIR, 'hdsi-start-years.json')
-const OUT_PROVENANCE = path.join(HDSI_DIR, 'hdsi-start-years.roster-provenance.json')
+const MANUAL_PATH = path.join(HDSI_DIR, 'ucsd-start-years.manual.json')
+const OUT_MAP = path.join(HDSI_DIR, 'ucsd-start-years.json')
+const OUT_PROVENANCE = path.join(HDSI_DIR, 'ucsd-start-years.roster-provenance.json')
 
 const ABS_MIN_YEAR = 1995
-
-function parsePopulateArgs(rawArgs) {
-  let referenceYearArg
-  for (const a of rawArgs) {
-    if (a.startsWith('--reference-year=')) referenceYearArg = Number(a.slice(17))
-  }
-  return { referenceYearArg }
-}
 
 function sortKeys(obj) {
   return Object.keys(obj)
@@ -52,58 +47,50 @@ function loadManual() {
   }
 }
 
-function clamp(n, lo, hi) {
-  return Math.min(hi, Math.max(lo, n))
-}
-
-/** Build { id → startYear } for active roster + manual overrides; write JSON + provenance. */
-function buildYearMap(referenceYearArg) {
+/** Build { id → startYear } from inline ucsdStartYear + manual overrides; write JSON + provenance. */
+function buildYearMap() {
   const key = getPacificDateKey(new Date())
-  const refYear = Number.isFinite(referenceYearArg)
-    ? referenceYearArg
-    : Number.parseInt(String(key).slice(0, 4), 10)
-
-  if (!Number.isFinite(refYear) || refYear < ABS_MIN_YEAR) {
-    console.error('years: invalid reference year')
-    process.exit(1)
-  }
 
   const professors = JSON.parse(fs.readFileSync(PROF_PATH, 'utf8'))
   const active = professors.filter((p) => p.active !== false)
+  const activeIds = new Set(active.map((p) => p.id))
   const manual = loadManual()
 
   const out = {}
-  const derived = {}
+  const missing = []
 
   for (const p of active) {
-    const yLegacy = Number(p.yearsAtHdsi)
-    if (!Number.isFinite(yLegacy) || yLegacy < 0 || !Number.isInteger(yLegacy)) {
-      console.error(`years: missing or invalid yearsAtHdsi for ${p.id} (${JSON.stringify(p.yearsAtHdsi)})`)
-      process.exit(1)
+    const y = Number(p.ucsdStartYear ?? p.hdsiStartYear)
+    if (!Number.isFinite(y) || !Number.isInteger(y) || y < ABS_MIN_YEAR) {
+      missing.push(p.id)
+      continue
     }
-    const computed = refYear - yLegacy
-    const start = clamp(computed, ABS_MIN_YEAR, refYear)
-    if (computed < ABS_MIN_YEAR) {
-      console.warn(`years: ${p.id}: implied start ${computed} clipped to ${ABS_MIN_YEAR}`)
-    }
-    if (computed > refYear) {
-      console.warn(`years: ${p.id}: implied start ${computed} clipped to ${refYear}`)
-    }
-    derived[p.id] = start
-    out[p.id] = start
+    out[p.id] = y
+  }
+
+  const needManual = missing.filter((id) => manual[id] == null)
+  if (needManual.length > 0) {
+    const preview = needManual.slice(0, 12).join(', ')
+    const more = needManual.length > 12 ? ` (+${needManual.length - 12} more)` : ''
+    console.warn(
+      `years: ${needManual.length} active row(s) missing ucsdStartYear — set on row or in manual JSON (${preview}${more})`,
+    )
   }
 
   for (const [id, raw] of Object.entries(manual)) {
+    if (!activeIds.has(id)) {
+      console.warn(`years: manual id "${id}" not in active roster`)
+      continue
+    }
     const override = Number(raw)
     if (!Number.isFinite(override) || !Number.isInteger(override)) {
       console.warn(`years: skip manual "${id}": not an integer (${JSON.stringify(raw)})`)
       continue
     }
-    if (override < ABS_MIN_YEAR || override > refYear + 1) {
-      console.warn(`years: skip manual "${id}": ${override} outside plausible band`)
+    if (override < ABS_MIN_YEAR) {
+      console.warn(`years: skip manual "${id}": ${override} before ${ABS_MIN_YEAR}`)
       continue
     }
-    if (!derived[id]) console.warn(`years: manual id "${id}" not in active roster`)
     out[id] = override
   }
 
@@ -114,20 +101,22 @@ function buildYearMap(referenceYearArg) {
     `${JSON.stringify(
       {
         generatedAt: new Date().toISOString(),
-        mechanism: 'roster_yearsAtHdsi_minus_reference_year',
-        referencePacificDateKeyDefault: Number.isFinite(referenceYearArg) ? null : key,
-        referenceYearUsed: refYear,
-        formula: 'hdsiStartYear = clamp(referenceYear - yearsAtHdsi, ...) then manual overrides',
+        mechanism: 'inline_ucsdStartYear_on_professor_row_plus_manual_json',
+        referencePacificDateKeyWhenGenerated: key,
+        formula:
+          'ucsdStartYear per active row in professors.json; ucsd-start-years.manual.json overrides by id; game uses puzzle calendar year minus ucsdStartYear',
         manualOverridesPath: path.relative(PKG_ROOT, MANUAL_PATH).replace(/\\/g, '/'),
-        derivedCount: active.length,
+        professorJsonPath: path.relative(PKG_ROOT, PROF_PATH).replace(/\\/g, '/'),
+        idsInMap: Object.keys(out).length,
         manualOverrideIds: [...Object.keys(manual)].sort(),
+        documentation: 'docs/ucsd-years-data.md',
       },
       null,
       2,
     )}\n`,
   )
 
-  console.log(`years: wrote ${OUT_MAP} (${Object.keys(out).length} ids, reference year ${refYear})`)
+  console.log(`years: wrote ${OUT_MAP} (${Object.keys(out).length} ids)`)
   return out
 }
 
@@ -151,22 +140,22 @@ function applyMapToProfessors(mapOrNull, professorsPath) {
   let applied = 0
   const unknown = []
 
-  for (const [key, val] of Object.entries(map)) {
+  for (const [mapId, val] of Object.entries(map)) {
     const yr = Number(val)
     if (!Number.isFinite(yr) || !Number.isInteger(yr)) {
-      console.warn(`years: skip "${key}": non-integer year (${JSON.stringify(val)})`)
+      console.warn(`years: skip "${mapId}": non-integer year (${JSON.stringify(val)})`)
       continue
     }
     if (yr < ABS_MIN_YEAR || yr > maxYear) {
-      console.warn(`years: skip "${key}": year ${yr} outside ${ABS_MIN_YEAR}–${maxYear}`)
+      console.warn(`years: skip "${mapId}": year ${yr} outside ${ABS_MIN_YEAR}–${maxYear}`)
       continue
     }
-    const p = byId.get(key)
+    const p = byId.get(mapId)
     if (!p) {
-      unknown.push(key)
+      unknown.push(mapId)
       continue
     }
-    p.hdsiStartYear = yr
+    p.ucsdStartYear = yr
     applied++
   }
 
@@ -175,12 +164,11 @@ function applyMapToProfessors(mapOrNull, professorsPath) {
   }
 
   fs.writeFileSync(professorsPath, JSON.stringify(professors, null, 2) + '\n')
-  console.log(`years: applied hdsiStartYear for ${applied} professor row(s)`)
+  console.log(`years: applied ucsdStartYear for ${applied} professor row(s)`)
 }
 
-function cmdPopulate(restArgs) {
-  const { referenceYearArg } = parsePopulateArgs(restArgs)
-  const out = buildYearMap(referenceYearArg)
+function cmdPopulate() {
+  const out = buildYearMap()
   applyMapToProfessors(out, PROF_PATH)
 }
 
@@ -196,13 +184,19 @@ function cmdWipe() {
   const professors = JSON.parse(fs.readFileSync(PROF_PATH, 'utf8'))
   let cleared = 0
   for (const p of professors) {
+    let hit = false
+    if ('ucsdStartYear' in p) {
+      delete p.ucsdStartYear
+      hit = true
+    }
     if ('hdsiStartYear' in p) {
       delete p.hdsiStartYear
-      cleared++
+      hit = true
     }
+    if (hit) cleared++
   }
   fs.writeFileSync(PROF_PATH, JSON.stringify(professors, null, 2) + '\n')
-  console.log(`years: removed hdsiStartYear from ${cleared} professor rows`)
+  console.log(`years: removed start year from ${cleared} professor row(s)`)
 }
 
 const args = process.argv.slice(2)
@@ -212,12 +206,12 @@ if (args[0] === 'populate' || args[0] === 'sync' || args[0] === 'wipe') {
 }
 
 if (cmd === 'populate') {
-  cmdPopulate(args)
+  cmdPopulate()
 } else if (cmd === 'sync') {
   cmdSync()
 } else if (cmd === 'wipe') {
   cmdWipe()
 } else {
-  console.error('years: usage: years.mjs [populate|sync|wipe] [--reference-year=YYYY]')
+  console.error('years: usage: years.mjs [populate|sync|wipe]')
   process.exit(1)
 }

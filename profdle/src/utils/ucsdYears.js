@@ -8,20 +8,18 @@ export function puzzleCalendarYear(puzzleDayKey) {
 }
 
 /**
- * Whole calendar years of **DSC tenure** (game column): `puzzleYear − hdsiStartYear` when synced.
- * `hdsiStartYear` comes from **`hdsi-start-years.json`** (`years:populate` + manual overrides in that JSON).
- * Falls back to legacy {@link prof.yearsAtHdsi} only when unset.
+ * Whole calendar years **at UCSD** for the puzzle column (displayed “UCSD years”):
+ * `puzzle calendar year − ucsdStartYear` (floored at 0).
+ *
+ * **`ucsdStartYear`** must be maintained on each `professors.json` row (calendar year first roster-listed/joined; see docs).
+ * Overrides and sync: **`npm run years:populate`** — see **`docs/ucsd-years-data.md`**.
  */
-export function getYearsAtHdsi(prof, puzzleDayKey) {
+export function getUcsdYears(prof, puzzleDayKey) {
   if (!prof) return null
   const py = puzzleCalendarYear(puzzleDayKey)
-  const start = prof.hdsiStartYear
+  const start = prof.ucsdStartYear
   if (Number.isFinite(Number(start)) && Number.isFinite(py)) {
     return Math.max(0, py - Number(start))
-  }
-  const legacy = prof.yearsAtHdsi
-  if (legacy != null && Number.isFinite(Number(legacy))) {
-    return Number(legacy)
   }
   return null
 }

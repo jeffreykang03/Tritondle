@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react'
 
-export function EndModal({ open, guessCount, shareText, onDismiss }) {
+export function EndModal({
+  open,
+  guessCount,
+  shareText,
+  onDismiss,
+  variant = 'won',
+  answerName = '',
+}) {
   const [copied, setCopied] = useState(false)
 
   async function handleCopy(e) {
@@ -38,7 +45,15 @@ export function EndModal({ open, guessCount, shareText, onDismiss }) {
           ×
         </button>
         <p id="end-modal-title" className="end-title">
-          You got it in {guessCount} {guessCount === 1 ? 'guess' : 'guesses'}!
+          {variant === 'gaveUp' ? (
+            <>
+              The answer was <strong>{answerName}</strong>
+            </>
+          ) : (
+            <>
+              You got it in {guessCount} {guessCount === 1 ? 'guess' : 'guesses'}!
+            </>
+          )}
         </p>
         <button type="button" className="end-card-btn" onClick={handleCopy}>
           {copied ? 'Copied!' : 'Copy results'}

@@ -1,4 +1,4 @@
-import { getYearsAtHdsi } from './yearsAtHdsi.js'
+import { getUcsdYears } from './ucsdYears.js'
 
 /** DSC / band tags plus optional non-DSC courses (e.g. COGS), trimmed strings */
 function mergeCourseTags(prof) {
@@ -160,13 +160,13 @@ function compareMostTaughtClass(guessMt, targetMt, targetOtherTags) {
 /**
  * Compare a guessed professor to the daily target.
  * Expects: appointments (faculty directory tags), mostTaughtClass (optional),
- * otherClasses, optional additionalCourses, researchAreas, DSC tenure via hdsiStartYear (or legacy yearsAtHdsi).
+ * otherClasses, optional additionalCourses, researchAreas; UCSD years via {@link prof.ucsdStartYear} — see docs/ucsd-years-data.md.
  */
 export function compareGuess(guess, target, puzzleDayKey) {
   const isCorrect = guess.id === target.id
 
-  const guessYears = getYearsAtHdsi(guess, puzzleDayKey)
-  const targetYears = getYearsAtHdsi(target, puzzleDayKey)
+  const guessYears = getUcsdYears(guess, puzzleDayKey)
+  const targetYears = getUcsdYears(target, puzzleDayKey)
 
   const ga = guess.appointments ?? []
   const ta = target.appointments ?? []

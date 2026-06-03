@@ -40,7 +40,7 @@ function courseFinalHintRevealText(target) {
     const shown = courses.slice(0, max)
     const more =
       courses.length > max ? ` (+${courses.length - max} more on roster)` : ''
-    return `No single SunSET primary is listed—roster DSC / extra courses include: ${shown.join(', ')}${more}`
+    return `No single SunSET primary is listed: roster DSC / extra courses include ${shown.join(', ')}${more}`
   }
   return 'No SunSET primary and no discrete course codes on this roster row.'
 }
@@ -66,27 +66,54 @@ export function HintBox({ target, guessCount = 0 }) {
     <section className="hint-box" aria-label="Hints">
       <div className="hint-box-inner">
         <h2 className="hint-box-heading">Hints</h2>
-        <div className="hint-lines">
+        <div className="hint-list">
           {hasThematicHints ? (
             <>
               <p className={unlocked1 ? 'hint unlocked' : 'hint locked'}>
-                {unlocked1
-                  ? (hint1 ?? 'No hint available.')
-                  : `Hint 1 in ${moreTriesPhrase(remaining1)}.`}
+                <span className="hint-num-label">Hint #1</span>
+                {unlocked1 ? (
+                  <>
+                    <span className="hint-num-sep">: </span>
+                    {hint1 ?? 'No hint available.'}
+                  </>
+                ) : (
+                  <>
+                    <span className="hint-num-sep">: </span>
+                    unlocks in {moreTriesPhrase(remaining1)}.
+                  </>
+                )}
               </p>
               <p className={unlocked2 ? 'hint unlocked' : 'hint locked'}>
-                {unlocked2
-                  ? (hint2 ?? 'No second hint.')
-                  : `Hint 2 in ${moreTriesPhrase(remaining2)}.`}
+                <span className="hint-num-label">Hint #2</span>
+                {unlocked2 ? (
+                  <>
+                    <span className="hint-num-sep">: </span>
+                    {hint2 ?? 'No second hint.'}
+                  </>
+                ) : (
+                  <>
+                    <span className="hint-num-sep">: </span>
+                    unlocks in {moreTriesPhrase(remaining2)}.
+                  </>
+                )}
               </p>
             </>
           ) : (
             <p className="hint-box-meta">No thematic hints for today’s puzzle.</p>
           )}
           <p className={unlockedMostTaught ? 'hint unlocked' : 'hint locked'}>
-            {unlockedMostTaught
-              ? courseFinalHintRevealText(target)
-              : `SunSET course hint (most-taught or roster courses) in ${moreTriesPhrase(remainingMt)}.`}
+            <span className="hint-num-label">Course hint</span>
+            {unlockedMostTaught ? (
+              <>
+                <span className="hint-num-sep">: </span>
+                {courseFinalHintRevealText(target)}
+              </>
+            ) : (
+              <>
+                <span className="hint-num-sep">: </span>
+                SunSET course (most-taught or roster) unlocks in {moreTriesPhrase(remainingMt)}.
+              </>
+            )}
           </p>
         </div>
       </div>

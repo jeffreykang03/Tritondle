@@ -34,7 +34,8 @@ jobs:
       - name: Install and build
         working-directory: profdle
         env:
-          # https://<owner>.github.io/<repo>/
+          # https://<owner>.github.io/<repo>/ — subpath only in CI (see profdle/vite.config.js)
+          GH_PAGES: '1'
           BASE_PATH: ${{ github.event.repository.name }}
         run: |
           npm ci

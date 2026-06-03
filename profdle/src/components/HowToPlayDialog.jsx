@@ -35,8 +35,7 @@ export function HowToPlayDialog({ open, onDismiss }) {
         </h2>
         <div className="info-dialog-body howto-dialog-body">
           <p>
-            Each day, you are trying to guess one HDSI professor. Using the categories and clues, deduce the professor's identity in as few tries as possible. Thematic hints unlock after 5 and 10 tries; an extra SunSET-related course hint
-            unlocks after 15 tries.
+            Each day, you are trying to guess one HDSI professor from the undergrad puzzle pool: Teaching Faculty, faculty with an undergrad SunSET primary course (DSC below 200), and associates who teach lower/upper DSC. Using the categories and clues, deduce who it is in as few tries as possible. Thematic hints unlock after 5 and 10 tries; an extra SunSET-related course hint unlocks after 15 tries.
           </p>
 
           <h3 className="howto-heading">Tile colors</h3>

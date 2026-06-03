@@ -2,13 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 /**
- * GitHub Pages project sites use `https://<user>.github.io/<repo>/`.
- * CI sets `BASE_PATH` to the repo name (no slashes). Local dev: unset → `/`.
- *
- * For a `username.github.io` user site (served from domain root), leave `BASE_PATH` unset in CI
- * or override in the workflow.
+ * Local dev / preview always use `/` so http://localhost:5173 works.
+ * GitHub Pages project sites set `GH_PAGES=1` + `BASE_PATH=<repo>` in CI only.
  */
 function resolveBase() {
+  if (process.env.GH_PAGES !== '1') return '/'
   const raw = (process.env.BASE_PATH || '').trim()
   if (!raw) return '/'
   const slug = raw.replace(/^\/+|\/+$/g, '')

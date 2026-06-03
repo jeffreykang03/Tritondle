@@ -41,13 +41,11 @@ export function FootnoteDialog({ open, onDismiss }) {
             </a>, professor data obtained from HDSI website.
           </p>
           <p>
-            Thematic hints unlock after 5 and 10 tries. After 15 tries, the answer&apos;s SunSET{' '}
-            <strong>most-taught course</strong> is shown when the roster lists one; otherwise you see{' '}
-            <strong>real course codes</strong> from that row&apos;s DSC / extra course tags (band-only tags like
-            “lower” don&apos;t count). If there are no course tags at all, the hint says so.
+            General hints unlock after 5 and 10 tries. After 15 tries, the answer&apos;s SunSET{' '}
+            <strong>most-taught course</strong> is shown if available. Otherwise, other courses professor has taught are shown.
           </p>
           <p>
-            <strong>DSC tenure</strong> is WIP.
+            DSC tenure is WIP, only partial data.
           </p>
         </div>
       </div>

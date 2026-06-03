@@ -7,7 +7,7 @@ function cellEmoji(status) {
   return '🟥'
 }
 
-/** Wordle-style grid: Name · Faculty listing · Research · Most taught · Other courses · DSC tenure */
+/** Wordle-style grid: Name · Faculty listing · Research · Most taught · Other courses · UCSD years */
 export function buildShareText({ guesses, target, puzzleDayKey, gameUrl }) {
   const n = guesses.length
   const header = `HDSI Profdle ${puzzleDayKey} · ${n} ${n === 1 ? 'guess' : 'guesses'}\n`

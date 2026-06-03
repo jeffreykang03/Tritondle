@@ -19,7 +19,7 @@ export function GuessTable({ guesses, target, puzzleDayKey }) {
             <th title="DSC codes from SunSET (except most-taught) plus roster extras like COGS; orange = 1 overlapping real code vs answer, yellow = 2+. Level bands lower/upper/grad are hidden in the table (&quot;—&quot;); rows with only bands or truly empty overlap count as matched with each other.">
               Other courses
             </th>
-            <th title="Whole calendar years as DSC-listed faculty at UC San Diego — many arrived through home departments before the institute’s public launch (~2018), so totals are not capped at “years since HDSI existed.” Roster-maintained (green = exact; yellow = within 2 vs answer). Triangle points toward the answer when wrong.">
+            <th title="DSC tenure: whole calendar years at UC San Diego from the roster start year (puzzle calendar year minus start year, floored at 0). Based on scraped public bios / Profiles plus manual tweaks — approximate, not HR tenure. Green = exact; yellow = within 2 vs answer. Triangle points toward the answer when wrong.">
               DSC tenure
             </th>
           </tr>

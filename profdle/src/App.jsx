@@ -12,7 +12,10 @@ import {
   loadPersistedGame,
   savePersistedGame,
 } from './utils/gameStorage.js'
-import { getDailyProfessor, getActiveProfessors } from './utils/getDailyProfessor.js'
+import {
+  getDailyProfessor,
+  getUndergradPuzzleProfessors,
+} from './utils/getDailyProfessor.js'
 import { getPacificDateKey } from './utils/pacificDate.js'
 
 function initGame() {
@@ -34,7 +37,8 @@ function initGame() {
     puzzleDayKey,
     target,
     guesses,
-    status: saved.status === 'won' ? 'won' : 'playing',
+    status:
+      saved.status === 'won' ? 'won' : saved.status === 'gaveUp' ? 'gaveUp' : 'playing',
     winModalDismissed: saved.winModalDismissed === true,
   }
 }
@@ -47,8 +51,9 @@ export default function App() {
   const [winModalDismissed, setWinModalDismissed] = useState(init.winModalDismissed ?? false)
   const [footnoteOpen, setFootnoteOpen] = useState(false)
   const [howToPlayOpen, setHowToPlayOpen] = useState(false)
+  const [giveUpPending, setGiveUpPending] = useState(false)
 
-  const activeProfessors = useMemo(() => getActiveProfessors(professors), [])
+  const activeProfessors = useMemo(() => getUndergradPuzzleProfessors(professors), [])
 
   const shareText = useMemo(
     () =>
@@ -101,12 +106,38 @@ export default function App() {
     setGuesses(next)
 
     if (professor.id === init.target.id) {
+      setGiveUpPending(false)
       setWinModalDismissed(false)
       setStatus('won')
     }
   }
 
+  function requestGiveUp() {
+    if (status !== 'playing') return
+    setGiveUpPending(true)
+  }
+
+  function confirmGiveUp() {
+    setGiveUpPending(false)
+    setWinModalDismissed(false)
+    setStatus('gaveUp')
+  }
+
+  function cancelGiveUp() {
+    setGiveUpPending(false)
+  }
+
+  function showResultsAgain() {
+    setWinModalDismissed(false)
+  }
+
+  function startOver() {
+    clearPersistedGame()
+    window.location.href = window.location.pathname
+  }
+
   const playing = status === 'playing'
+  const endModalOpen = (status === 'won' || status === 'gaveUp') && !winModalDismissed
 
   return (
     <main className="profdle">
@@ -148,17 +179,58 @@ export default function App() {
             </button>
           </div>
         </div>
-        <p className="subtitle">Guess the HDSI professor!</p>
+        <p className="subtitle">Guess today&apos;s HDSI undergrad professor!</p>
       </header>
+
+      {!playing ? (
+        <div className="game-complete-banner" role="status">
+          <p className="game-complete-text">
+            {status === 'gaveUp'
+              ? 'You gave up on today\u2019s puzzle.'
+              : `You solved today\u2019s puzzle in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}!`}
+          </p>
+          <div className="game-complete-actions">
+            {!endModalOpen ? (
+              <button type="button" className="game-complete-btn" onClick={showResultsAgain}>
+                View results
+              </button>
+            ) : null}
+            <button type="button" className="game-complete-btn game-complete-btn--muted" onClick={startOver}>
+              Start over
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       <GuessInput
         professors={activeProfessors}
         guesses={guesses}
         disabled={!playing}
+        inputHint={playing ? undefined : 'Today\u2019s puzzle is finished.'}
         onGuess={handleGuess}
       />
 
       <GuessTable guesses={guesses} target={init.target} puzzleDayKey={init.puzzleDayKey} />
+
+      {playing ? (
+        <div className={`give-up-row${giveUpPending ? ' give-up-row--confirm' : ''}`}>
+          {giveUpPending ? (
+            <>
+              <p className="give-up-confirm-text">Reveal today&apos;s answer?</p>
+              <button type="button" className="give-up-btn" onClick={cancelGiveUp}>
+                Cancel
+              </button>
+              <button type="button" className="give-up-btn give-up-btn--danger" onClick={confirmGiveUp}>
+                Yes, give up
+              </button>
+            </>
+          ) : (
+            <button type="button" className="give-up-btn" onClick={requestGiveUp}>
+              Give up
+            </button>
+          )}
+        </div>
+      ) : null}
 
       <HintBox target={init.target} guessCount={guesses.length} />
 
@@ -166,7 +238,9 @@ export default function App() {
       <FootnoteDialog open={footnoteOpen} onDismiss={() => setFootnoteOpen(false)} />
 
       <EndModal
-        open={status === 'won' && !winModalDismissed}
+        open={endModalOpen}
+        variant={status === 'gaveUp' ? 'gaveUp' : 'won'}
+        answerName={init.target.name}
         guessCount={guesses.length}
         shareText={shareText}
         onDismiss={() => setWinModalDismissed(true)}

@@ -4,12 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "predev": "npm run years:populate",
     "prebuild": "npm run verify:data && npm run years:populate",
     "build": "vite build",
+    "build:pages": "GH_PAGES=1 BASE_PATH=tritondle vite build",
     "lint": "eslint . && npm run verify:data",
-    "preview": "vite preview",
+    "preview": "vite preview --open",
+    "serve": "npm run build && vite preview --open",
     "verify:data": "node scripts/verifyprofessors.mjs",
     "sunset:classes": "node scripts/mergesunsetclasses.mjs",
     "sunset:classes:dry": "node scripts/mergesunsetclasses.mjs --dry-run",
@@ -18,6 +21,8 @@
     "years:sync": "node scripts/years.mjs sync",
     "years:from-roster": "node scripts/years.mjs populate",
     "years:populate": "node scripts/years.mjs populate",
+    "years:draft-site": "node scripts/draft-dsc-start-years-from-site.mjs",
+    "years:draft-site:apply": "node scripts/draft-dsc-start-years-from-site.mjs --apply",
     "roster:spreadsheet": "node scripts/export-professors-spreadsheet.mjs"
   },
   "dependencies": {
@@ -33,6 +38,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
+    "pdf-parse": "^2.4.5",
     "vite": "^8.0.10"
   }
 }

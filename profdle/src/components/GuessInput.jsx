@@ -21,7 +21,7 @@ function shuffleRankMap(ids) {
   return rank
 }
 
-export function GuessInput({ professors, guesses, disabled, onGuess }) {
+export function GuessInput({ professors, guesses, disabled, onGuess, inputHint }) {
   const [query, setQuery] = useState('')
 
   const professorsDeduped = useMemo(() => {
@@ -106,9 +106,12 @@ export function GuessInput({ professors, guesses, disabled, onGuess }) {
             id="professor-query"
             type="text"
             autoComplete="off"
-            placeholder="Start typing a name…"
+            placeholder={
+              disabled && inputHint ? inputHint : 'Start typing a name…'
+            }
             value={query}
             disabled={disabled}
+            aria-disabled={disabled}
             aria-expanded={showDropdown}
             aria-controls={showDropdown ? 'professor-suggestions' : undefined}
             aria-autocomplete="list"

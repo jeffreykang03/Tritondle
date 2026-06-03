@@ -1,0 +1,257 @@
+{
+  "tiffany-amariuta": {
+    "url": "https://datascience.ucsd.edu/people/tiffany-amariuta/",
+    "excerpt": "PhD: Harvard University Before starting her lab in San Diego, Tiffany earned a B.S. in Biological Engineering at MIT and went on to conduct graduate research as part of the Bioinformatics and Integrative Genomics Ph.D. program at Harvard Medical School, where she studied the genetic susceptibility of autoimmune diseases and other polygenic diseases. During graduate school, Tiff",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "mikio-aoi": {
+    "url": "https://datascience.ucsd.edu/people/mikio-aoi/",
+    "excerpt": "ts and faculty at UCSD in the Halıcıoğlu Data Science Institute and The Department of Neurobiology – Division of Biology.",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "mikhail-belkin": {
+    "url": "https://datascience.ucsd.edu/people/mikhail-belkin/",
+    "excerpt": "Mikhail Belkin received his Ph.D. in 2003 from the Department of Mathematics at the University of Chicago. His research interests are in theory and applications of machine learning and data analysis. Some of his well-known work includes widely used Laplacian Eigenmaps, Graph Regularization and Manifold Regularization algorithms, which brought ideas from classical differential g",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "jelena-bradic": {
+    "url": "https://datascience.ucsd.edu/people/jelena-bradic/",
+    "reason": "fetch_or_http_error",
+    "error": "HTTP 404 for https://datascience.ucsd.edu/people/jelena-bradic/"
+  },
+  "virginia-de-sa": {
+    "url": "https://datascience.ucsd.edu/people/virginia-de-sa/",
+    "excerpt": "Associate Director de Sa is a leader in the fields of cognitive science, neuroscience, computer science, engineering, and data science. Her research utilizes multiple approaches to increase our understanding of how humans and machines learn to perceive the world around them. She earned her Ph.D. and master’s in Computer Science from the University of Rochester, and a bachelor’s",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "shannon-ellis": {
+    "url": "https://datascience.ucsd.edu/people/shannon-ellis/",
+    "excerpt": "ssor in Cognitive Science and HDSI at UC San Diego. She obtained her Ph.D. in Human Genetics from Johns Hopkins School of Medicine. Her primary focus at UC San Diego is to foster and promote data science education. To this end, she teaches undergraduate programming and data science courses and pursues projects that help provide access and educational materials to individuals wh",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "yoav-freund": {
+    "url": "https://datascience.ucsd.edu/people/yoav-freund/",
+    "excerpt": "Freund works on applications of machine learning algorithms in bioinformatics, computer vision, finance, network routing and high-performance computing. His current research focuses on machine learning to develop and analyze adaptive algorithms that change their behavior by learning from examples, rather than by re-programming. He served as a senior research scientist at Columb",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "rajesh-gupta": {
+    "url": "https://datascience.ucsd.edu/people/rajesh-gupta/",
+    "excerpt": "ces, founding director of the Halıcıoğlu Data Science Institute at UC San Diego, and as a distinguished professor of Computer Science and Engineering at UC San Diego. Professor Gupta's research is in embedded and cyber-physical systems with a focus on sensor data organization and its use in optimization and analytics. His past contributions include SystemC modeling and SPARK pa",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "julian-mcauley": {
+    "url": "https://datascience.ucsd.edu/people/julian-mcauley/",
+    "excerpt": "McAuley is professor in CSE. His research focuses on the linguistic, temporal, and social dimensions of opinions and behavior in social networks and other online communities. He has harnessed data science tools to increase understanding the facets of people’s opinions, the processes that lead people to acquire taste for gourmet foods and beers, and even the visual dimensions of",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "gal-mishne": {
+    "url": "https://datascience.ucsd.edu/people/gal-mishne/",
+    "excerpt": "Mishne’s research is at the intersection of signal processing and machine learning for graph-based modeling, processing and analysis of large-scale high-dimensional real-world data. She develops unsupervised and generalizable methods that allow the data to reveal its own story in an unbiased manner. Her research includes anomaly detection and clustering in remote sensing imager",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "dimitris-politis": {
+    "url": "https://datascience.ucsd.edu/people/dimitris-politis/",
+    "excerpt": "Associate Director Politis is an internationally known scholar in mathematics and economics, working on time series, bootstrap methods, and nonparametric estimation, and a researcher with authorship of more than 100 journal papers and monographs. Politis earned his Ph.D. in statistics from Stanford University, and dual masters’ degrees from Stanford in statistics and mathematic",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "babak-salimi": {
+    "url": "https://datascience.ucsd.edu/people/babak-salimi/",
+    "excerpt": "Babak Salimi is an assistant professor in HDSI at UC San Diego. Before joining UC San Diego, he was a postdoctoral research associate in the Department of Computer Science and Engineering, University of Washington where he worked with Prof. Dan Suciu and the database group . He received his Ph.D. from the School of Computer Science at Carleton University, advised by Prof. L",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "jingbo-shang": {
+    "url": "https://datascience.ucsd.edu/people/jingbo-shang/",
+    "excerpt": "Jingbo Shang is an Associate Professor in CSE and HDSI at UC San Diego. He obtained his Ph.D. from CS@UIUC. He received his B.E. from Shanghai Jiao Tong University, China. He is broadly interested in data mining, natural language processing, and machine learning. His research about mining and constructing structured knowledge from massive text corpora with minimum human effort",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "berk-ustun": {
+    "url": "https://datascience.ucsd.edu/people/berk-ustun/",
+    "excerpt": "Berk Ustun is an Assistant Professor at the Halıcıoğlu Data Science Institute at UCSD. His research lies at the intersection of machine learning, optimization, and human-centered design. In particular, he is interested in developing methods to promote the responsible use of machine learning in medicine, consumer finance, criminal justice, and the physical sciences. Prior to his",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "lily-weng": {
+    "url": "https://datascience.ucsd.edu/people/lily-weng/",
+    "excerpt": "Lily Weng is an Assistant Professor in the Halıcıoğlu Data Science Institute at UC San Diego. She received her PhD in Electrical Engineering and Computer Sciences (EECS) from MIT in 2020, and her Bachelor and Master degree both in Electrical Engineering at National Taiwan University in 2011 and 2013. Her research interests focus on the intersection between deep learning, optimi",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "rose-yu": {
+    "url": "https://datascience.ucsd.edu/people/rose-yu/",
+    "excerpt": "Rose Yu is an Associate Professor at UC San Diego department of Computer Science and Engineering. She is a primary faculty with the AI Group and is affiliated with Halıcıoğlu Data Science Institute. Her research interests lie primarily in machine learning, especially for large-scale spatiotemporal data. She is particularly excited about AI for scientific discovery. She has won",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "arun-kumar": {
+    "url": "https://datascience.ucsd.edu/people/arun-kumar/",
+    "excerpt": "Arun Kumar – Halıcıoğlu Data Science Institute – UC San Diego Home About Mission and Goals Commitment and Resources In Memoriam Employment The Halıcıoğlu Challenge Annual Report – Year 6 Contact Us People Faculty Administration Fellows Visiting Scholars Faculty Affiliates Research Artificial Intelligence and Machine Learning Biomedical Data Science Data Infrastructure and Syste",
+    "bioExtracted": false,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "barna-saha": {
+    "url": "https://datascience.ucsd.edu/people/barna-saha/",
+    "excerpt": "and Engineering (CSE) and the Halıcıoğlu Data Science Institute (HDSI). Before joining UC San Diego, she was an Associate Professor at UC Berkeley. Saha’s primary research focus is on Theoretical Computer Science, specifically Algorithm Design. She is passionate about diversity and teaching, and seeing students succeed from all backgrounds. She is a recipient of the Presidentia",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "sam-lau": {
+    "url": "https://datascience.ucsd.edu/people/sam-lau/",
+    "excerpt": "ant teaching professor in the Halıcıoğlu Data Science Institute at UC San Diego. Sam has designed and taught flagship data science courses at UC Berkeley and UC San Diego. His research creates novel interfaces for learning and teaching data science, including the popular Pandas Tutor tool ( https://pandastutor.com/ ) which serves over 40,000 people per year. He is the author of",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "marina-langlois": {
+    "url": "https://datascience.ucsd.edu/people/marina-langlois/",
+    "reason": "fetch_or_http_error",
+    "error": "timeout after 25000ms for https://datascience.ucsd.edu/people/marina-langlois/"
+  },
+  "terry-sejnowski": {
+    "url": "https://datascience.ucsd.edu/people/terry-sejnowski/",
+    "excerpt": "Terry Sejnowski received his Ph.D. in physics from Princeton University. He was a postdoctoral fellow in the Department of Neurobiology at Harvard Medical School before joining the faculty at Johns Hopkins, where he was a Professor of Biophysics. He currently holds the Francis Crick Chair at The Salk Institute for Biological Studies, and is a Distinguished Professor of Biology",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "young-han-kim": {
+    "url": "https://datascience.ucsd.edu/people/young-han-kim/",
+    "excerpt": "al and Computer Engineering , Halıcıoğlu Data Science Institute , Center for Wireless Communications , and Information Theory and Applications Center , University of California, San Diego 9500 Gilman Drive, Mail Code 0407 La Jolla, CA 92093-0407 Tel: (858) 534-4254 Fax: (858) 534-0556 yhk@ucsd.edu http://young-han.kim 김영한 News &ldquo; Fundamentals of Index Coding &rdquo; was pu",
+    "bioExtracted": false,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "hao-zhang": {
+    "url": "https://datascience.ucsd.edu/people/hao-zhang/",
+    "excerpt": "Dr. Zhang has served as a Postdoctoral Researcher at UC Berkeley’s Sky Lab and a Research Scientist for Petuum Inc, a start-up company that specializes in making AI technology scalable and affordable for general consumption and use.",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "alex-warstadt": {
+    "url": "https://datascience.ucsd.edu/people/alex-warstadt/",
+    "excerpt": "Education: Dr. Warstadt earned a PhD in Linguistics from New York University in 2022 under the mentorship of Prof. Samuel Bowman. Research: Dr. Warstadt is a natural language processing (NLP) researcher whose work focuses on using machine learning to address fundamental questions in linguistics, by exploring what Language Models (LMs) learn about grammar and how to apply them a",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "zhiting-hu": {
+    "url": "https://datascience.ucsd.edu/people/zhiting-hu/",
+    "excerpt": "Zhiting Hu is an Assistant Professor in Halicioglu Data Science Institute at UC San Diego. He received his Bachelor’s degree in Computer Science from Peking University in 2014, and his Ph.D. in Machine Learning from Carnegie Mellon University in 2020. His research interests lie in the broad area of machine learning, natural language processing, ML systems, healthcare and other",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "yian-ma": {
+    "url": "https://datascience.ucsd.edu/people/yian-ma/",
+    "excerpt": "Yian Ma works on scalable inference methods and their theoretical guarantees, with a focus on time series data and sequential decision making. He has been developing new Bayesian inference algorithms for uncertainty quantification as well as deriving computational and statistical guarantees for them. Prior to his appointment at UCSD, he worked as a post-doctoral fellow at UC Be",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "arya-mazumdar": {
+    "url": "https://datascience.ucsd.edu/people/arya-mazumdar/",
+    "excerpt": "of Technology (2011-2012), an assistant professor in University of Minnesota (2013-2015), and an assistant followed by associate professor in University of Massachusetts Amherst (2015-2021). Arya is a recipient of multiple awards, including a Distinguished Dissertation Award for his Ph.D. thesis (2011), the NSF CAREER award (2015), an EURASIP JSAP Best Paper Award (2020), and t",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "frank-wuerthwein": {
+    "url": "https://datascience.ucsd.edu/people/frank-wuerthwein/",
+    "excerpt": "Frank W. Wuerthwein is the Director of the San Diego Supercomputer Center and executive director of the Open Science Grid (OSG), a national cyber infrastructure to advance the sharing of resources, software, and knowledge.",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "rob-knight": {
+    "url": "https://datascience.ucsd.edu/people/rob-knight/",
+    "excerpt": "Rob Knight is the founding Director of the Center for Microbiome Innovation and Professor of Pediatrics, Bioengineering, and Computer Science & Engineering at UC San Diego. He is the Wolfe Family Endowed Chair in Microbiome Research. His work is at the intersection of data science, bioinformatics, and microbiology, and has linked microbes to a range of health conditions inclu",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "haojian-jin": {
+    "url": "https://datascience.ucsd.edu/people/haojian-jin/",
+    "excerpt": "Haojian Jin’s research lies at the intersection of human-computer interaction, specializing in systems for machine learning, Internet of Things, and privacy systems. His work has been recognized with a UbiComp Gaetano Borriello Outstanding Student Award, Research Highlights at Communications of the ACM and GetMobile, and best paper awards at Ubicomp and ACM Computing Reviews.",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "george-sugihara": {
+    "url": "https://datascience.ucsd.edu/people/george-sugihara/",
+    "excerpt": "Sugihara is a theoretical ecologist who has performed foundational work in the data analysis of complex systems from fisheries to medicine to finance. He gained renown for developing, with Lord Robert May, methods for forecasting chaotic systems, providing the first example of chaos in nature with the diatom populations at Scripps Pier. He has worked with the major institutions",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "michael-holst": {
+    "url": "https://datascience.ucsd.edu/people/mike-holst/",
+    "excerpt": "Holst is a leader in the Mathematical and Computational Physics Research Group, the Center for Computational Mathematics, and the Center for Astrophysics and Space Sciences. His interdisciplinary work at the university reaches into the fields of biochemistry and biophysics, computational fluid dynamics, computer graphics, materials science, and numerical algorithms relativity.",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "biwei-huang": {
+    "url": "https://datascience.ucsd.edu/people/biwei-huang/",
+    "excerpt": "Biwei Huang’s research interests are mainly in three aspects: (1) automated causal discovery in complex environments with theoretical guarantees, (2) advancing machine learning from the causal perspective, and (3) using or adapting causal discovery approaches to solve scientific problems. She successfully led a NeurIPS’20 workshop on causal discovery and causality-inspired mach",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "duncan-watson-parris": {
+    "url": "https://datascience.ucsd.edu/people/duncan-watson-parris/",
+    "excerpt": "Duncan Watson-Parris previously worked as a senior research associate at the University of Oxford . His research addresses the representation of aerosols and clouds within climate models. Aerosols and clouds together represent some of greatest challenges for climate models, and Dr. Watson-Parris has pioneered strategies to capitalize on the machinery of data science in tackling",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "tauhidur-rahman": {
+    "url": "https://datascience.ucsd.edu/people/tauhidur-rahman/",
+    "excerpt": "ahman previously served as an Assistant Professor in Computer Science at the University of Massachusetts Amherst where he co-directed the Mobile Sensing and Ubiquitous Computing Laboratory (MOSAIC Lab). His current research focuses on building novel ubiquitous and mobile health sensing technologies that capture observable low-level physical signals in the form of an acoustic an",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "benjamin-smarr": {
+    "url": "https://datascience.ucsd.edu/people/benjamin-smarr/",
+    "excerpt": "Benjamin Smarr is an associate professor at the Halicioğlu Data Science Institute and the Department of Bioengineering at the University of California, San Diego. As an NIH fellow at UC Berkeley he developed techniques for extracting health and performance predictors from repeated, longitudinal physiological measurements. Historically his work has focused on neuroendocrine cont",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "albert-hsiao": {
+    "url": "https://datascience.ucsd.edu/people/albert-hsiao/",
+    "excerpt": "Albert Hsiao, MD, PhD is a cardiothoracic radiologist trained in engineering at Caltech and bioengineering and bioinformatics in the UC San Diego Medical Scientist Training Program (MSTP). He completed his residency and fellowships in Interventional Radiology and Cardiovascular Imaging at Stanford before returning to UC San Diego as faculty in Radiology, where he leads advanced",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "tara-javidi": {
+    "url": "https://datascience.ucsd.edu/people/tara-javidi/",
+    "excerpt": "Javidi founded and co-directs the Center for Machine-Integrated Computing and Security at UC San Diego. Among her projects is DetecDrone Target Search Technology, what she calls drones that think. Her research focus is on stochastic analysis, design, and control of information collection, processing, and transfer in modern communication and networked systems. Interests include:",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "armin-schwartzman": {
+    "url": "https://datascience.ucsd.edu/people/armin-schwartzman/",
+    "excerpt": "Armin Schwartzman’s research encompasses theoretical and practical aspects of statistical signal and image analysis in a variety of scientific applications. These include spatio-temporal and high-dimensional data analysis, geometric statistics and smooth Gaussian random fields, with applications in biomedicine, the environment, neuroscience, genetics and cosmology. Armin Schwar",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "shankar-subramaniam": {
+    "url": "https://datascience.ucsd.edu/people/shankar-subramaniam/",
+    "excerpt": "Subramaniam is the Joan and Irwin Jacobs Endowed Chair in Bioengineering and Systems Biology, and a Distinguished Scientist at the San Diego Supercomputer Center. He has served on advisory boards for several biotech and bioinformatics companies, universities, international governmental organizations, and the NIH.",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "janine-tiefenbruck": {
+    "url": "https://datascience.ucsd.edu/people/janine-tiefenbruck/",
+    "excerpt": "education program through the Halıcıoğlu Data Science Institute. Her goal is educating students in the theoretical basis of math that will help them build a solid foundation for whatever direction they choose to take in data science, and other technology specializations. “What I like about the field of Data Science is that it’s so customizable, it’s not just: ‘Here’s a formula,",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  },
+  "kyle-shannon": {
+    "url": "https://datascience.ucsd.edu/people/kyle-shannon/",
+    "reason": "fetch_or_http_error",
+    "error": "HTTP 404 for https://datascience.ucsd.edu/people/kyle-shannon/"
+  },
+  "soohyun-nam-liao": {
+    "url": "https://datascience.ucsd.edu/people/soohyun-nam-liao/",
+    "excerpt": "Hello! I am specialized in C omputer S cience ( CS) education . I am passionate in conducting CS education research as a means to push for diversity and equity in CS programs. I am currently affiliated with The CSEd Research Lab in University of California at San Diego. Before joining UCSD, which is my PhD alma mater, I worked at Princeton University as teaching faculty. I love",
+    "bioExtracted": true,
+    "reason": "no_hdsi_cv_profiles_or_wiki_match"
+  }
+}

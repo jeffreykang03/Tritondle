@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-06-03T02:16:02.483Z",
+  "mechanism": "inline_ucsdStartYear_on_professor_row_plus_manual_json",
+  "referencePacificDateKeyWhenGenerated": "2026-06-02",
+  "formula": "ucsdStartYear per active row in professors.json; ucsd-start-years.manual.json overrides by id; game uses puzzle calendar year minus ucsdStartYear",
+  "manualOverridesPath": "src/data/hdsi/ucsd-start-years.manual.json",
+  "professorJsonPath": "src/data/professors.json",
+  "idsInMap": 11,
+  "manualOverrideIds": [],
+  "documentation": "docs/ucsd-years-data.md"
+}

@@ -6,7 +6,6 @@
       "data-science-for-scientific-discovery",
       "data-infrastructure-and-systems"
     ],
-    "yearsAtHdsi": 12,
     "hints": [
       "Workflows",
       "Cyberinfrastructure"
@@ -20,7 +19,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2014
+    "ucsdStartYear": 2001
   },
   {
     "id": "tiffany-amariuta",
@@ -29,7 +28,6 @@
       "biomedical-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Genetics",
       "Biostatistics"
@@ -42,8 +40,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "mikio-aoi",
@@ -53,7 +50,6 @@
       "artificial-intelligence-and-machine-learning",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Neuroscience",
       "Bayesian"
@@ -63,8 +59,7 @@
     "mostTaughtClass": "DSC 241",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "ery-arias-castro",
@@ -73,7 +68,6 @@
       "statistics",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "Geometry",
       "Statistics"
@@ -87,7 +81,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2005
+    "ucsdStartYear": 2005
   },
   {
     "id": "vineet-bafna",
@@ -95,7 +89,6 @@
     "researchAreas": [
       "biomedical-data-science"
     ],
-    "yearsAtHdsi": 10,
     "hints": [
       "Genomics",
       "Algorithms"
@@ -110,7 +103,7 @@
       "associate-faculty",
       "endowed-chairs"
     ],
-    "hdsiStartYear": 2016
+    "ucsdStartYear": 2003
   },
   {
     "id": "mikhail-belkin",
@@ -119,7 +112,6 @@
       "artificial-intelligence-and-machine-learning",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 9,
     "hints": [
       "Kernels",
       "Deep learning"
@@ -132,8 +124,7 @@
     "appointments": [
       "endowed-chairs",
       "tenure-track"
-    ],
-    "hdsiStartYear": 2017
+    ]
   },
   {
     "id": "jelena-bradic",
@@ -142,7 +133,6 @@
       "statistics",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Robust stats",
       "Causal"
@@ -155,8 +145,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2011
+    ]
   },
   {
     "id": "alex-cloninger",
@@ -165,7 +154,6 @@
       "theoretical-foundations-of-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Manifolds",
       "Harmonics"
@@ -179,7 +167,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2018
+    "ucsdStartYear": 2017
   },
   {
     "id": "virginia-de-sa",
@@ -188,7 +176,6 @@
       "artificial-intelligence-and-machine-learning",
       "biomedical-data-science"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "Neural nets",
       "Brain signals"
@@ -202,8 +189,7 @@
     "appointments": [
       "endowed-chairs",
       "tenure-track"
-    ],
-    "hdsiStartYear": 2015
+    ]
   },
   {
     "id": "justin-eldridge",
@@ -212,7 +198,6 @@
       "theoretical-foundations-of-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 7,
     "hints": [
       "Teaching",
       "Theory"
@@ -230,7 +215,7 @@
     "appointments": [
       "teaching-faculty"
     ],
-    "hdsiStartYear": 2019
+    "ucsdStartYear": 2018
   },
   {
     "id": "shannon-ellis",
@@ -240,7 +225,6 @@
       "data-science-for-scientific-discovery",
       "data-and-society"
     ],
-    "yearsAtHdsi": 7,
     "hints": [
       "Reproducibility",
       "Visualization"
@@ -256,8 +240,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "teaching-faculty"
-    ],
-    "hdsiStartYear": 2019
+    ]
   },
   {
     "id": "yoav-freund",
@@ -266,7 +249,6 @@
       "theoretical-foundations-of-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 12,
     "hints": [
       "Boosting",
       "Online learning"
@@ -279,8 +261,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2014
+    ]
   },
   {
     "id": "r-stuart-geiger",
@@ -288,7 +269,6 @@
     "researchAreas": [
       "data-and-society"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Open source",
       "STS"
@@ -302,7 +282,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2021
+    "ucsdStartYear": 2020
   },
   {
     "id": "rajesh-gupta",
@@ -310,7 +290,6 @@
     "researchAreas": [
       "data-infrastructure-and-systems"
     ],
-    "yearsAtHdsi": 13,
     "hints": [
       "Embedded",
       "Leadership"
@@ -323,8 +302,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2013
+    ]
   },
   {
     "id": "julian-mcauley",
@@ -332,7 +310,6 @@
     "researchAreas": [
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 10,
     "hints": [
       "Recommenders",
       "NLP"
@@ -345,8 +322,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "associate-faculty"
-    ],
-    "hdsiStartYear": 2016
+    ]
   },
   {
     "id": "gal-mishne",
@@ -355,7 +331,6 @@
       "theoretical-foundations-of-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Geometry",
       "Embeddings"
@@ -365,8 +340,7 @@
     "mostTaughtClass": "DSC 40A",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "dimitris-politis",
@@ -375,7 +349,6 @@
       "statistics",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 12,
     "hints": [
       "Time series",
       "Resampling"
@@ -389,8 +362,7 @@
     "appointments": [
       "endowed-chairs",
       "tenure-track"
-    ],
-    "hdsiStartYear": 2014
+    ]
   },
   {
     "id": "babak-salimi",
@@ -400,7 +372,6 @@
       "data-infrastructure-and-systems",
       "data-and-society"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Causal inference",
       "Databases"
@@ -412,8 +383,7 @@
     "mostTaughtClass": "DSC 100",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "jingbo-shang",
@@ -421,7 +391,6 @@
     "researchAreas": [
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Weak supervision",
       "NLP"
@@ -431,8 +400,7 @@
     "mostTaughtClass": "DSC 148",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "berk-ustun",
@@ -441,7 +409,6 @@
       "artificial-intelligence-and-machine-learning",
       "data-and-society"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Interpretability",
       "Decisions"
@@ -451,8 +418,7 @@
     "mostTaughtClass": "DSC 140A",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "yusu-wang",
@@ -461,7 +427,6 @@
       "theoretical-foundations-of-data-science",
       "biomedical-data-science"
     ],
-    "yearsAtHdsi": 9,
     "hints": [
       "Topology",
       "Algorithms"
@@ -475,7 +440,7 @@
       "endowed-chairs",
       "tenure-track"
     ],
-    "hdsiStartYear": 2017
+    "ucsdStartYear": 2020
   },
   {
     "id": "lily-weng",
@@ -483,7 +448,6 @@
     "researchAreas": [
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Adversarial",
       "Robustness"
@@ -495,8 +459,7 @@
     "mostTaughtClass": "DSC 210",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "rose-yu",
@@ -505,7 +468,6 @@
       "artificial-intelligence-and-machine-learning",
       "data-science-for-scientific-discovery"
     ],
-    "yearsAtHdsi": 7,
     "hints": [
       "Spatiotemporal",
       "Physics ML"
@@ -519,8 +481,7 @@
     "appointments": [
       "associate-faculty",
       "tenure-track"
-    ],
-    "hdsiStartYear": 2019
+    ]
   },
   {
     "id": "arun-kumar",
@@ -529,7 +490,6 @@
       "data-infrastructure-and-systems",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 7,
     "hints": [
       "Databases",
       "ML systems"
@@ -542,8 +502,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2019
+    ]
   },
   {
     "id": "barna-saha",
@@ -551,7 +510,6 @@
     "researchAreas": [
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Streaming",
       "Graphs"
@@ -564,8 +522,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2018
+    ]
   },
   {
     "id": "bradley-voytek",
@@ -574,7 +531,6 @@
       "biomedical-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "Oscillations",
       "Neuroscience"
@@ -591,7 +547,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2015
+    "ucsdStartYear": 2018
   },
   {
     "id": "sam-lau",
@@ -600,7 +556,6 @@
       "artificial-intelligence-and-machine-learning",
       "data-and-society"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "HCI",
       "Pedagogy"
@@ -612,8 +567,7 @@
     "mostTaughtClass": "DSC 106",
     "appointments": [
       "teaching-faculty"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "marina-langlois",
@@ -622,7 +576,6 @@
       "theoretical-foundations-of-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Discrete math",
       "Undergrad"
@@ -635,8 +588,7 @@
     "mostTaughtClass": "DSC 20",
     "appointments": [
       "teaching-faculty"
-    ],
-    "hdsiStartYear": 2018
+    ]
   },
   {
     "id": "terry-sejnowski",
@@ -645,7 +597,6 @@
       "biomedical-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 14,
     "hints": [
       "Neuroscience",
       "Salk"
@@ -657,8 +608,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "associate-faculty"
-    ],
-    "hdsiStartYear": 2012
+    ]
   },
   {
     "id": "young-han-kim",
@@ -667,7 +617,6 @@
       "theoretical-foundations-of-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 12,
     "hints": [
       "Information theory",
       "Limits"
@@ -679,8 +628,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "associate-faculty"
-    ],
-    "hdsiStartYear": 2014
+    ]
   },
   {
     "id": "hao-zhang",
@@ -689,7 +637,6 @@
       "data-infrastructure-and-systems",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 4,
     "hints": [
       "Distributed",
       "Training"
@@ -699,8 +646,7 @@
     "mostTaughtClass": "DSC 204A",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2022
+    ]
   },
   {
     "id": "alex-warstadt",
@@ -708,7 +654,6 @@
     "researchAreas": [
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 4,
     "hints": [
       "Syntax",
       "Linguistics"
@@ -721,8 +666,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2022
+    ]
   },
   {
     "id": "zhiting-hu",
@@ -731,7 +675,6 @@
       "artificial-intelligence-and-machine-learning",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Probabilistic",
       "Generation"
@@ -743,8 +686,7 @@
     "mostTaughtClass": "DSC 140B",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "yian-ma",
@@ -754,7 +696,6 @@
       "artificial-intelligence-and-machine-learning",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Uncertainty",
       "Asymptotics"
@@ -766,8 +707,7 @@
     "mostTaughtClass": "DSC 40A",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "arya-mazumdar",
@@ -776,7 +716,6 @@
       "theoretical-foundations-of-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 9,
     "hints": [
       "Coding theory",
       "TILOS"
@@ -789,8 +728,7 @@
     "appointments": [
       "endowed-chairs",
       "tenure-track"
-    ],
-    "hdsiStartYear": 2017
+    ]
   },
   {
     "id": "rayan-saab",
@@ -799,7 +737,6 @@
       "theoretical-foundations-of-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Compressed sensing",
       "Quantization"
@@ -813,7 +750,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2018
+    "ucsdStartYear": 2013
   },
   {
     "id": "frank-wuerthwein",
@@ -822,7 +759,6 @@
       "data-infrastructure-and-systems",
       "data-science-for-scientific-discovery"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "SDSC",
       "Distributed"
@@ -835,8 +771,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2015
+    ]
   },
   {
     "id": "rob-knight",
@@ -844,7 +779,6 @@
     "researchAreas": [
       "biomedical-data-science"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Microbiome",
       "Multiomics"
@@ -857,8 +791,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2018
+    ]
   },
   {
     "id": "haojian-jin",
@@ -867,7 +800,6 @@
       "data-infrastructure-and-systems",
       "data-and-society"
     ],
-    "yearsAtHdsi": 4,
     "hints": [
       "Security",
       "Privacy"
@@ -877,8 +809,7 @@
     "mostTaughtClass": "DSC 102",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2022
+    ]
   },
   {
     "id": "ronghui-lily-xu",
@@ -887,7 +818,6 @@
       "biomedical-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 10,
     "hints": [
       "Biostatistics",
       "Trials"
@@ -901,7 +831,7 @@
     "appointments": [
       "tenure-track"
     ],
-    "hdsiStartYear": 2016
+    "ucsdStartYear": 2004
   },
   {
     "id": "george-sugihara",
@@ -910,7 +840,6 @@
       "data-science-for-scientific-discovery",
       "statistics"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "Dynamics",
       "Ecology"
@@ -923,8 +852,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2015
+    ]
   },
   {
     "id": "michael-holst",
@@ -933,7 +861,6 @@
       "theoretical-foundations-of-data-science",
       "data-science-for-scientific-discovery"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "PDEs",
       "Numerics"
@@ -946,8 +873,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2015
+    ]
   },
   {
     "id": "biwei-huang",
@@ -956,7 +882,6 @@
       "artificial-intelligence-and-machine-learning",
       "theoretical-foundations-of-data-science"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Causal discovery",
       "Representations"
@@ -966,8 +891,7 @@
     "mostTaughtClass": "DSC 210",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "duncan-watson-parris",
@@ -976,7 +900,6 @@
       "data-science-for-scientific-discovery",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Climate",
       "Earth ML"
@@ -988,8 +911,7 @@
     "mostTaughtClass": "DSC 80",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "tauhidur-rahman",
@@ -998,7 +920,6 @@
       "data-and-society",
       "data-science-for-scientific-discovery"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Mobile sensing",
       "Development"
@@ -1008,8 +929,7 @@
     "mostTaughtClass": "DSC 80",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "benjamin-smarr",
@@ -1018,7 +938,6 @@
       "biomedical-data-science",
       "data-science-for-scientific-discovery"
     ],
-    "yearsAtHdsi": 6,
     "hints": [
       "Wearables",
       "Rhythms"
@@ -1031,8 +950,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2020
+    ]
   },
   {
     "id": "albert-hsiao",
@@ -1041,7 +959,6 @@
       "biomedical-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 8,
     "hints": [
       "Radiology",
       "Imaging"
@@ -1054,8 +971,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2018
+    ]
   },
   {
     "id": "tara-javidi",
@@ -1064,7 +980,6 @@
       "theoretical-foundations-of-data-science",
       "artificial-intelligence-and-machine-learning"
     ],
-    "yearsAtHdsi": 11,
     "hints": [
       "Sequential",
       "Networks"
@@ -1077,8 +992,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2015
+    ]
   },
   {
     "id": "armin-schwartzman",
@@ -1087,7 +1001,6 @@
       "statistics",
       "biomedical-data-science"
     ],
-    "yearsAtHdsi": 10,
     "hints": [
       "Spatial stats",
       "Imaging"
@@ -1099,8 +1012,7 @@
     "mostTaughtClass": "DSC 190",
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2016
+    ]
   },
   {
     "id": "shankar-subramaniam",
@@ -1108,7 +1020,6 @@
     "researchAreas": [
       "biomedical-data-science"
     ],
-    "yearsAtHdsi": 12,
     "hints": [
       "Systems biology",
       "Networks"
@@ -1121,8 +1032,7 @@
     "mostTaughtClass": null,
     "appointments": [
       "tenure-track"
-    ],
-    "hdsiStartYear": 2014
+    ]
   },
   {
     "id": "peter-chi",
@@ -1131,7 +1041,6 @@
       "biomedical-data-science",
       "statistics"
     ],
-    "yearsAtHdsi": 2,
     "hints": [
       "Intro DSC",
       "Phylogenetics"
@@ -1142,7 +1051,7 @@
     "appointments": [
       "teaching-faculty"
     ],
-    "hdsiStartYear": 2024
+    "ucsdStartYear": 2025
   },
   {
     "id": "janine-tiefenbruck",
@@ -1151,7 +1060,6 @@
       "data-and-society",
       "statistics"
     ],
-    "yearsAtHdsi": 5,
     "hints": [
       "Practice DSC",
       "Pedagogy"
@@ -1165,8 +1073,7 @@
     "mostTaughtClass": "DSC 10",
     "appointments": [
       "teaching-faculty"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "kyle-shannon",
@@ -1175,7 +1082,6 @@
       "theoretical-foundations-of-data-science",
       "data-infrastructure-and-systems"
     ],
-    "yearsAtHdsi": 4,
     "hints": [
       "Foundations",
       "Core DSC"
@@ -1191,8 +1097,7 @@
     ],
     "appointments": [
       "teaching-faculty"
-    ],
-    "hdsiStartYear": 2021
+    ]
   },
   {
     "id": "soohyun-nam-liao",
@@ -1200,7 +1105,6 @@
     "researchAreas": [
       "data-and-society"
     ],
-    "yearsAtHdsi": 3,
     "hints": [
       "CS education",
       "Equity"
@@ -1213,7 +1117,6 @@
     "mostTaughtClass": "DSC 30",
     "appointments": [
       "teaching-faculty"
-    ],
-    "hdsiStartYear": 2023
+    ]
   }
 ]

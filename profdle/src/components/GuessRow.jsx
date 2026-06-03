@@ -5,7 +5,7 @@ import {
   sortResearchThemes,
 } from '../constants/hdsiCatalog.js'
 import { compareGuess } from '../utils/compareGuess.js'
-import { getYearsAtHdsi } from '../utils/yearsAtHdsi.js'
+import { getUcsdYears } from '../utils/ucsdYears.js'
 
 function cellClass(status) {
   if (status === 'match') return 'cell match'
@@ -50,7 +50,7 @@ function joinParts(parts) {
   return parts.join(', ')
 }
 
-/** Small triangle toward the answer (years: more tenure when ↑; catalog course: later course when ↑). */
+/** Small triangle toward the answer (years: higher UCSD years when ↑; catalog course: later course when ↑). */
 function HintChevron({ direction }) {
   if (direction !== 'up' && direction !== 'down') return null
   const up = direction === 'up'
@@ -90,7 +90,7 @@ export function GuessRow({ guess, target, puzzleDayKey }) {
   const r = compareGuess(guess, target, puzzleDayKey)
   const rowCorrect = r.isCorrect
 
-  const yNum = getYearsAtHdsi(guess, puzzleDayKey)
+  const yNum = getUcsdYears(guess, puzzleDayKey)
   const yearsDisplay = yNum != null && Number.isFinite(yNum) ? `${yNum}` : '—'
 
   const otherParts = otherCoursesForDisplay(guess)
@@ -99,9 +99,9 @@ export function GuessRow({ guess, target, puzzleDayKey }) {
 
   const yearsCellTitle =
     r.yearsArrow === 'up'
-      ? 'Answer has more DSC tenure (years at UCSD in this roster) than this professor'
+      ? 'Answer has more DSC tenure (from this roster start year) than this professor'
       : r.yearsArrow === 'down'
-        ? 'Answer has less DSC tenure (years at UCSD in this roster) than this professor'
+        ? 'Answer has fewer DSC tenure (from this roster start year) than this professor'
         : undefined
 
   const mostTaughtCellTitle =
